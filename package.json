@@ -1,0 +1,31 @@
+{
+  "name": "airbnb-clone",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "test": "echo No tests found.",
+    "format": "prettier --write --ignore-path=.gitignore .",
+    "format:check": "prettier --check --ignore-path=.gitignore .",
+    "deploy:vercel": "vercel"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "formik": "^2.0.0",
+    "framer-motion": "^9.0.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^4.0.0",
+    "@tanstack/react-query-devtools": "^4.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "husky": ">=7",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.0",
+    "vercel": "^30.2.2"
+  }
+}
