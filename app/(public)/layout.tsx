@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import styles from "./layout.module.scss";
 import "./globals.css";
-import BrandIcon from "@/components/atoms/brand-icon";
-import ProfileDropdown from "@/components/melecules/profile-dropdown";
 import { MantineProvider } from "@mantine/core";
 import { FC } from "react";
+import Header from "./components/header/header";
 
 interface RootLayoutProps extends Readonly<{
   children: React.ReactNode
@@ -23,12 +21,7 @@ const RootLayout: FC<RootLayoutProps> = ({children}) => {
     <html lang="en">
       <body className={inter.className}>
         <MantineProvider>
-          <div className={styles.header}>
-            <BrandIcon />
-            <ProfileDropdown />
-          </div>
-
-          {/* {children} */}
+          <Header />
         </MantineProvider>
       </body>
     </html>

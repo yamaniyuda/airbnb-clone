@@ -12,32 +12,9 @@ import {
   IconTrash,
   IconArrowsLeftRight,
 } from '@tabler/icons-react';
+import UserButton from '../atoms/user-button';
 
-interface UserButtonProps extends React.ComponentPropsWithoutRef<'button'> {
-  image: string;
-  name: string;
-  email: string;
-  icon?: React.ReactNode;
-}
 
-const UserButton = forwardRef<HTMLButtonElement, UserButtonProps>(
-  ({ image, name, email, icon, ...others }: UserButtonProps, ref) => (
-    <UnstyledButton
-      ref={ref}
-      style={{
-        padding: 'var(--mantine-spacing-md)',
-        color: 'var(--mantine-color-text)',
-        borderRadius: 'var(--mantine-radius-sm)',
-      }}
-      {...others}
-    >
-      <Group>
-        <IconBaselineDensityMedium  stroke={2} />
-        <Avatar src={image} radius="xl" />
-      </Group>
-    </UnstyledButton>
-  )
-);
 
 const ProfileDropdown : FC = () => {
   return (
