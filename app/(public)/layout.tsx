@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import styles from "./layout.module.scss";
 import "./globals.css";
+import BrandIcon from "@/components/atoms/brand-icon";
+import ProfileDropdown from "@/components/melecules/profile-dropdown";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className={styles.header}>
+          <BrandIcon />
+          <ProfileDropdown />
+        </div>
+
+        {/* content */}
+      </body>
     </html>
   );
 }
