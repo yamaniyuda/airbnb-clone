@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef } from 'react';
 import { Group, Avatar, Text, Menu, UnstyledButton } from '@mantine/core';
 
@@ -52,3 +54,5 @@ function Demo() {
     </Menu>
   );
 }
+
+export default Demo

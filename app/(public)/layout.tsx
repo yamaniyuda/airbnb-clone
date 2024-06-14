@@ -4,6 +4,7 @@ import styles from "./layout.module.scss";
 import "./globals.css";
 import BrandIcon from "@/components/atoms/brand-icon";
 import ProfileDropdown from "@/components/melecules/profile-dropdown";
+import { MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className={styles.header}>
-          <BrandIcon />
-          <ProfileDropdown />
-        </div>
+        <MantineProvider>
+          <div className={styles.header}>
+            <BrandIcon />
+            <ProfileDropdown />
+          </div>
 
-        {/* content */}
+          {/* content */}
+        </MantineProvider>
       </body>
     </html>
   );
