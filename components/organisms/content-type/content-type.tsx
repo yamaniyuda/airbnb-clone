@@ -24,7 +24,12 @@ const ContentType: FC = () => {
   return (
     <Carousel
       height={50}
-      className={styles.carauser_type__container}
+      className={`${styles.carauser_type__container} ${styles.control_is_inactive}`}
+      slideSize={'10%'}
+      classNames={{
+        control: styles.control
+       }}
+      align={'start'}
     >
       {CategoryContentOptions}
     </Carousel>
