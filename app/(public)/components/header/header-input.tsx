@@ -12,14 +12,13 @@ const headerOptionVariant: Variants = {
     scale: 0.1,
     transition: {
       ease: "easeOut",
-      duration: 1
+      duration: .3
     }
   },
   "open": {
 
   }
 }
-
 
 
 const HeaderInput: FC = () => {
