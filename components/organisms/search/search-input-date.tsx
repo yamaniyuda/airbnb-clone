@@ -7,9 +7,15 @@ const SearchInputDate: FC = () => {
   return (
     <Menu withArrow>
       <Menu.Target>
-        <UnstyledButton className={styles.search_input_button}>
-          <label htmlFor="destination">Where</label>
-          <input type="text" id='destination' placeholder='Search destinations' />
+        <UnstyledButton className={styles.search_input_button__date}>
+          <label htmlFor="check-in">Check in</label>
+          <input type="text" autoComplete='off' id='check-in' placeholder='Add dates' />
+        </UnstyledButton>
+      </Menu.Target>
+      <Menu.Target>
+        <UnstyledButton className={styles.search_input_button__date}>
+          <label htmlFor="check-out">Check out</label>
+          <input type="text" autoComplete='off' id='check-out' placeholder='Add dates' />
         </UnstyledButton>
       </Menu.Target>
     </Menu>
