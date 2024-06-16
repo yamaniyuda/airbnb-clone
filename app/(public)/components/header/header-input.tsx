@@ -39,21 +39,10 @@ const HeaderInput: FC = () => {
   }, []);
 
 
-
-  useEffect(() => {
-    if (isScrolled) {
-      controls.start({  transition: { duration: 0.3 } });
-    } else {
-      controls.start({  transition: { duration: 0.3 } });
-    }
-  }, [isScrolled, controls]);
-
-
-
   return (
     <div>
       <motion.div
-        className={styles.search_bar}
+        className={styles.search_bar_container}
         animate={controls}
       >
         <motion.div
@@ -66,7 +55,7 @@ const HeaderInput: FC = () => {
           <span>Experices</span>
           <span>Online Experices</span>
         </motion.div>
-        <motion.div>
+        <motion.div className={styles.search_bar__input}>
           <input type="text" placeholder="Search destinations" />
           <input type="date" placeholder="Check in" />
           <input type="date" placeholder="Check out" />
