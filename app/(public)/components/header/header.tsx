@@ -1,20 +1,17 @@
-import { FC, Fragment } from "react";
+'use client'
+
+import { FC } from "react";
 import styles from './header.module.scss'
-import BrandIcon from "@/components/atoms/brand-icon";
-import ProfileDropdown from "@/components/melecules/profile-dropdown";
-import HeaderInput from "./header-input";
 import HeaderTop from "./header-top";
+import HeaderContent from "./header-content";
+import { motion } from "framer-motion"
 
 const Header: FC = () => {
   return (
-    <div className={styles.header_container}>
+    <motion.div className={styles.header_container}>
       <HeaderTop />
-      <div className={styles.header_content}>
-        <BrandIcon />
-        <HeaderInput />
-        <ProfileDropdown />
-      </div>
-    </div>
+      <HeaderContent />
+    </motion.div>
   );
 };
 

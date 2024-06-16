@@ -6,17 +6,3 @@
     bg-[#e7e7e2]
   ;
 }
-
-.header_content {
-  @apply
-    px-10
-    flex
-    justify-between
-    items-center
-    rounded-t-3xl
-    bg-white
-    sticky
-    border-[1px]
-    border-gray-300
-  ;
-}
