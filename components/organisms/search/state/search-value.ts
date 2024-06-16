@@ -12,16 +12,12 @@
  * @property {string} SDEPARTUREDATE - Action type for setting the departure date.
  * @property {string} SARRIVALDATE - Action type for setting the arrival date.
  * @property {string} SGUESTS - Action type for setting the number of guests.
- * @property {string} TSEARCH - Action type for setting the current tab in the search.
- * @property {string} TSHOW - Action type for setting show or hidden from search component.
  */
 enum SearchActionKind {
   SREGION = 'SREGION',
   SDEPARTUREDATE = 'SDEPARTUREDATE',
   SARRIVALDATE = 'SARRIVALDATE',
   SGUESTS = 'SGUESTS',
-  TSEARCH = 'TSEARCH',
-  TSHOW = 'TSHOW'
 }
 
 
@@ -62,8 +58,6 @@ interface Payloads {
   filterDepartureDate: Exclude<Value, AnyObject>,
   filterArrivalDate: Exclude<Value, AnyObject>,
   filterGuests: Exclude<Value, string>,
-  tabSearch: CurrentTabOn
-  tabShow: boolean
 }
 
 
@@ -117,17 +111,6 @@ const SearchReducer = (state: Payloads, action: SearchAction): Payloads => {
         filterGuests: payload as any
       };
     
-    case SearchActionKind.TSEARCH:
-      return {
-        ...state,
-        tabSearch: payload as any
-      };
-
-    case SearchActionKind.TSHOW:
-      return {
-        ...state,
-        tabShow: payload as any
-      }
 
     default:
       return state;
@@ -144,8 +127,6 @@ const InitialSearchReducer: Payloads = {
   filterDepartureDate: null,
   filterGuests: null,
   filterRegion: null,
-  tabSearch: "stays",
-  tabShow: false
 };
 
 

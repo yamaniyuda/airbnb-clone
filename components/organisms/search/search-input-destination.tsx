@@ -1,7 +1,12 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { Menu, UnstyledButton, rem, Text, CheckboxCard, Group, Checkbox } from '@mantine/core';
-import styles from './_search.module.scss'
 import Image from 'next/image';
+import { motion } from 'framer-motion'
+import { useSearchProviderComponent } from './search';
+import { Variants } from 'framer-motion';
+import styles from './_search.module.scss'
+import { inputCloseVariant, inputOpenVariant } from './_variant_data';
+
 
 const regionImageNames: string[] = [
   'word', 'australia', 'malaysia', 'europe', 'jepan', 'united-states'
@@ -9,7 +14,8 @@ const regionImageNames: string[] = [
 
 
 const SearchInputDestination: FC = () => {
-  
+  const { searchLogic } = useSearchProviderComponent()
+
 
   const regionComponent = regionImageNames.map((data, key) => {
     return (
@@ -25,24 +31,45 @@ const SearchInputDestination: FC = () => {
   })
 
 
-  return (
-    <Menu withArrow>
-      <Menu.Target>
-        <UnstyledButton className={styles.search_input_button}>
-          <label htmlFor="destination">Where</label>
-          <input type="text" id='destination' placeholder='Search destinations' />
-        </UnstyledButton>
-      </Menu.Target>
+  useEffect(() => {
+    console.log(searchLogic)
+  }, [searchLogic?.showSearch])
 
-      <Menu.Dropdown className={styles.search_input_destination__container}>
-        <Menu.Label className={styles.search_input_destination__label}>Search by region</Menu.Label>
-        <Checkbox.Group>
-          <div className={styles.search_input_destination__region}>
-            {regionComponent}
-          </div>
-        </Checkbox.Group>
-      </Menu.Dropdown>
-    </Menu>
+
+  return (
+    <motion.div>
+      <motion.div
+        initial={false}
+        variants={inputOpenVariant}
+        animate={searchLogic?.showSearch ? "open" : "close"}
+      >
+        <Menu withArrow>
+          <Menu.Target>
+            <UnstyledButton className={styles.search_input_button}>
+              <label htmlFor="destination">Where</label>
+              <input type="text" id='destination' placeholder='Search destinations' />
+            </UnstyledButton>
+          </Menu.Target>
+
+          <Menu.Dropdown className={styles.search_input_destination__container}>
+            <Menu.Label className={styles.search_input_destination__label}>Search by region</Menu.Label>
+            <Checkbox.Group>
+              <div className={styles.search_input_destination__region}>
+                {regionComponent}
+              </div>
+            </Checkbox.Group>
+          </Menu.Dropdown>
+        </Menu>
+      </motion.div>
+      <motion.div
+        initial={false}
+        variants={inputCloseVariant}
+        animate={searchLogic!.showSearch ? "close" : "open"}
+        className={styles.search_input_destination__close}
+      >
+        <motion.span>Anywhere</motion.span>
+      </motion.div>
+    </motion.div>
   );
 }
 

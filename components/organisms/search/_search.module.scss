@@ -2,6 +2,9 @@
   @apply
     grid
     place-items-center
+    transition 
+    ease-in-out 
+    duration-500
   ;
 }
 
@@ -27,6 +30,7 @@
   @apply
     border-[1px]
     rounded-full
+    relative
     shadow-md
     flex
   ;
@@ -106,6 +110,16 @@
   }
 }
 
+.search_input_destination__close {
+  @apply
+    grid
+    place-items-center
+    h-[100%]
+    px-5
+    py-3
+  ;
+}
+
 .search_input_destination__region {
   @apply
     gap-5
@@ -117,6 +131,13 @@
 
 
 /* search-input-date.tsx */
+.search_input_button__date__container {
+  @apply
+    w-[max-content]
+    flex
+  ;
+}
+
 .search_input_button__date {
   @apply
     w-36
@@ -147,6 +168,66 @@
       focus:outline-none
     ;
   }
+}
 
-  
+/* search-input-guest.tsx */
+.search_input_guest__container {
+  @apply
+    flex
+    items-center
+    relative
+  ;
+}
+
+.search_input_guest__button {
+  @apply
+    px-8
+    py-3
+    cursor-pointer
+    flex
+    flex-col
+    hover:bg-gray-100
+    hover:rounded-full
+  ;
+
+  &:hover input {
+    @apply
+    bg-gray-100
+    ;
+  }
+
+  label {
+    @apply
+      text-[12px]
+    ;
+  }
+
+  input {
+    @apply
+      text-[14px]
+      focus:outline-none
+    ;
+  }
+}
+
+.search_input_guest__icon__container {
+  @apply
+    absolute
+    right-2
+    top-[50%]
+    translate-y-[-50%]
+    p-5
+    bg-[#ff385c]
+    rounded-full
+  ;
+}
+
+.search_input_guest__icon {
+  display: block; 
+  fill: white; 
+  height: 16px; 
+  width: 16px; 
+  stroke: white; 
+  stroke-width: 4; 
+  overflow: visible;
 }

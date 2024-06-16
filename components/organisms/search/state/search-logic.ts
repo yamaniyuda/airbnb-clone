@@ -50,7 +50,7 @@ const SearchLogic = (state: Payloads, action: SearchAction): Payloads => {
 
 const InitialSearchLogic: Payloads = {
   showCurrentTab: 'stays',
-  showSearch: false,
+  showSearch: true,
   shwoInputSearch: true
 };
 

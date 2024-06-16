@@ -4,9 +4,7 @@ import SearchTab from "./search-tab";
 import { InitialSearchReducer, Payloads as PayloadSearchAction, SearchActionKind, SearchReducer } from "./state/search-value";
 import SearchInput from "./search-input";
 import styles from './_search.module.scss'
-import { InitialSearchLogic, SearchLogic, Payloads as PaylaodSearchLogic } from "./state/search-logic";
-
-
+import { InitialSearchLogic, SearchLogic, Payloads as PaylaodSearchLogic, SearchLogicKind } from "./state/search-logic";
 
 
 interface Guests {
@@ -30,14 +28,16 @@ interface SearchProviderComponent
 interface SearchContextProps {
   filterSearch: SearchProviderRef | null | any,
   dispatchFilterSearch: Function,
-  searchLogic: PaylaodSearchLogic | null
+  searchLogic: PaylaodSearchLogic | null,
+  dispatchSearchLogic: Function
 }
 
 
 const SearchContext = createContext<SearchContextProps>({
   filterSearch: null,
   dispatchFilterSearch: () => {},
-  searchLogic: null
+  searchLogic: null,
+  dispatchSearchLogic: () => {}
 })
 
 
@@ -49,9 +49,10 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, {}>(
     const [filterSearch, dispatchFilterSearch] = useReducer(SearchReducer, InitialSearchReducer)
     const [searchLogic, dispatchSearchLogic] = useReducer(SearchLogic, InitialSearchLogic)
 
+    
     const handleScroll = () => {
-      if (window.scrollY > 50) dispatchFilterSearch({ type: SearchActionKind.TSHOW, payload: false });
-      else dispatchFilterSearch({ type: SearchActionKind.TSHOW, payload: true });
+      if (window.scrollY > 50) dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false });
+      else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
     };
   
   
@@ -64,7 +65,7 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, {}>(
 
 
     return (
-      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic }}>
+      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic, dispatchSearchLogic }}>
         <motion.div className={styles.search}>
           <SearchTab />
           <SearchInput />
