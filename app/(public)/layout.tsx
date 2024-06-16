@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import { FC } from "react";
-import Header from "./components/header/header";
+import Header from "../../components/organisms/header/header";
 
 interface RootLayoutProps extends Readonly<{
   children: React.ReactNode

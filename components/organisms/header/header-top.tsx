@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 import { motion, Variants } from 'framer-motion'
-import styles from './header-top.module.scss'
+import styles from './_header.module.scss'
 
 
 const headerTopVariant: Variants = {

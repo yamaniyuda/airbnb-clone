@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from "react";
 import HeaderInput from "./header-input";
 import ProfileDropdown from "@/components/melecules/profile-dropdown";
 import { motion, Variants } from "framer-motion";
-import styles from "./header-content.module.scss";
+import styles from "./_header.module.scss";
 
 
 const headerContainerVariant: Variants = {

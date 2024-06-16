@@ -1,10 +1,10 @@
 'use client'
 
 import { FC } from "react";
-import styles from './header.module.scss'
 import HeaderTop from "./header-top";
 import HeaderContent from "./header-content";
 import { motion } from "framer-motion"
+import styles from './_header.module.scss'
 
 const Header: FC = () => {
   return (

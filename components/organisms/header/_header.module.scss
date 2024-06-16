@@ -1,0 +1,40 @@
+.header_container {
+  @apply
+    fixed
+    top-0
+    w-[100%]
+    bg-[#e7e7e2]
+  ;
+}
+
+.header_content {
+  @apply
+    px-10
+    flex
+    justify-between
+    items-start
+    py-5
+    rounded-t-3xl
+    bg-white
+    sticky
+    border-[1px]
+    border-gray-300
+  ;
+}
+
+.header_top {
+  @apply
+    cursor-pointer
+    h-[6vh]
+    grid
+    place-items-center
+  ;
+}
+
+.header_top__span {
+  @apply
+    underline
+    text-sm
+    font-semibold
+  ;
+}
