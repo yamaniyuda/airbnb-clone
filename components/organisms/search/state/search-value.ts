@@ -13,13 +13,15 @@
  * @property {string} SARRIVALDATE - Action type for setting the arrival date.
  * @property {string} SGUESTS - Action type for setting the number of guests.
  * @property {string} TSEARCH - Action type for setting the current tab in the search.
+ * @property {string} TSHOW - Action type for setting show or hidden from search component.
  */
 enum SearchActionKind {
   SREGION = 'SREGION',
   SDEPARTUREDATE = 'SDEPARTUREDATE',
   SARRIVALDATE = 'SARRIVALDATE',
   SGUESTS = 'SGUESTS',
-  TSEARCH = 'TSEARCH'
+  TSEARCH = 'TSEARCH',
+  TSHOW = 'TSHOW'
 }
 
 
@@ -41,7 +43,8 @@ type AnyObject = { [key: string]: string };
  * @type Value
  * @description Union type representing the possible values for the payload in search actions.
  */
-type Value = AnyObject | string | null;
+type Value = AnyObject | string | null | boolean;
+
 
 
 /**
@@ -52,6 +55,7 @@ type Value = AnyObject | string | null;
  * @property {string | null} filterArrivalDate - The arrival date filter value.
  * @property {AnyObject | null} filterGuests - The guests filter value.
  * @property {CurrentTabOn} tabSearch - The current tab value in the search.
+ * @property {CurrentTabOn} tabShow - The show current search.
  */
 interface Payloads {
   filterRegion: Exclude<Value, string>,
@@ -59,6 +63,7 @@ interface Payloads {
   filterArrivalDate: Exclude<Value, AnyObject>,
   filterGuests: Exclude<Value, string>,
   tabSearch: CurrentTabOn
+  tabShow: boolean
 }
 
 
@@ -118,6 +123,12 @@ const SearchReducer = (state: Payloads, action: SearchAction): Payloads => {
         tabSearch: payload as any
       };
 
+    case SearchActionKind.TSHOW:
+      return {
+        ...state,
+        tabShow: payload as any
+      }
+
     default:
       return state;
   }
@@ -133,8 +144,9 @@ const InitialSearchReducer: Payloads = {
   filterDepartureDate: null,
   filterGuests: null,
   filterRegion: null,
-  tabSearch: "stays"
+  tabSearch: "stays",
+  tabShow: false
 };
 
 
-export { InitialSearchReducer, SearchActionKind, SearchReducer };
+export { type Payloads, InitialSearchReducer, SearchActionKind, SearchReducer };
