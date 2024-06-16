@@ -1,0 +1,14 @@
+.header_top {
+  @apply
+    cursor-pointer
+    h-[6vh]
+    grid
+    place-items-center
+  ;
+}
+
+.header_top__span {
+  @apply
+    underline
+  ;
+}
