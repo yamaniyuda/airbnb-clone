@@ -4,7 +4,6 @@ import styles from './_page.module.scss'
 export default function Home() {
   return (
     <div className={styles.page}>
-      <ContentType/>
       <div style={{height: '200vh'}}></div>
     </div>
   );

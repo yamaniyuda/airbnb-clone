@@ -4,7 +4,7 @@ import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import { FC } from "react";
 import Header from "../../components/organisms/header/header";
-import Content from "../../components/organisms/content/content";
+import ContentType from "../../components/organisms/content-type/content-type";
 
 interface RootLayoutProps extends Readonly<{
   children: React.ReactNode
