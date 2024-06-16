@@ -4,7 +4,8 @@ import SearchTab from "./search-tab";
 import { InitialSearchReducer, Payloads as PayloadSearchAction, SearchActionKind, SearchReducer } from "./state/search-value";
 import SearchInput from "./search-input";
 import styles from './_search.module.scss'
-import { InitialSearchLogic, SearchLogic } from "./state/search-logic";
+import { InitialSearchLogic, SearchLogic, Payloads as PaylaodSearchLogic } from "./state/search-logic";
+
 
 
 
@@ -29,13 +30,14 @@ interface SearchProviderComponent
 interface SearchContextProps {
   filterSearch: SearchProviderRef | null | any,
   dispatchFilterSearch: Function,
-  searchLogic: 
+  searchLogic: PaylaodSearchLogic | null
 }
 
 
 const SearchContext = createContext<SearchContextProps>({
   filterSearch: null,
-  dispatchFilterSearch: () => {}
+  dispatchFilterSearch: () => {},
+  searchLogic: null
 })
 
 
@@ -62,7 +64,7 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, {}>(
 
 
     return (
-      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch }}>
+      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic }}>
         <motion.div className={styles.search}>
           <SearchTab />
           <SearchInput />

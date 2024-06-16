@@ -4,6 +4,7 @@ import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import { FC } from "react";
 import Header from "../../components/organisms/header/header";
+import Content from "../../components/organisms/content/content";
 
 interface RootLayoutProps extends Readonly<{
   children: React.ReactNode
@@ -22,7 +23,9 @@ const RootLayout: FC<RootLayoutProps> = ({children}) => {
       <body className={inter.className}>
         <MantineProvider>
           <Header />
-          <div className="h-[200vh] bg-white"></div>
+          <div className="h-[200vh] mt-[235px] bg-white">
+            <Content />
+          </div>
         </MantineProvider>
       </body>
     </html>
