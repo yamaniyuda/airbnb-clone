@@ -4,9 +4,10 @@ import { FC } from "react";
 import { Carousel } from "@mantine/carousel";
 import Image from "next/image";
 import styles from './_content-type.module.scss'
+import '@mantine/carousel/styles.css';
 
 const categoryImage: string[] = [
-  'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 
+  'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles',
 ]
 
 const ContentType: FC = () => {
@@ -22,10 +23,7 @@ const ContentType: FC = () => {
 
   return (
     <Carousel
-      withIndicators
       height={50}
-      slideSize={{ base: '10%' }}
-      align="start"
       className={styles.carauser_type__container}
     >
       {CategoryContentOptions}

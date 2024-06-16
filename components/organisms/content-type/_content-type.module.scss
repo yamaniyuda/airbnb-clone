@@ -1,6 +1,39 @@
 .carauser_type__container {
+  .mantine-Carousel-control {
+    display: none;
+  }
+
   @apply
     bg-white
     py-5
   ;
+
+  // &:before {
+  //   content: "";
+  //   @apply
+  //     bg-white
+  //     absolute
+  //     top-0
+  //     left-0
+  //     h-[100%]
+  //     w-[150px]
+  //     z-[1]
+  //     ;
+
+  //     background: linear-gradient(90deg, rgba(255,255,255,1) 22%, rgba(255,255,255,0) 100%);
+  // }
+
+  // &:after {
+  //   content: "";
+  //   @apply
+  //     bg-white
+  //     absolute
+  //     top-0
+  //     right-0
+  //     h-[100%]
+  //     w-[150px]
+  //   ;
+  //   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 78%);
+  // }
+
 }
