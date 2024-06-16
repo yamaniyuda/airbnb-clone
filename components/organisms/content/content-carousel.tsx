@@ -5,23 +5,19 @@ import { Carousel } from '@mantine/carousel';
 const ContentCarousel = () => {
     return (
         <Carousel
-            sx={{ maxWidth: 320 }}
-            mx="auto"
-            height={200}
-            styles={{
-                control: {
-                    '&[data-inactive]': {
-                        opacity: 0,
-                        cursor: 'default',
-                    },
-                },
-            }}
-        >
-            <Carousel.Slide>1</Carousel.Slide>
-            <Carousel.Slide>2</Carousel.Slide>
-            <Carousel.Slide>3</Carousel.Slide>
-            {/* ...other slides */}
-        </Carousel>
+        withIndicators
+        height={200}
+        slideSize={{ base: '50%', sm: '50%', md: '33.333333%' }}
+        slideGap={{ base: 'md', sm: 'md' }}
+        loop
+        align="start"
+  
+    >
+      <Carousel.Slide className='bg-blue-200'>1</Carousel.Slide>
+      <Carousel.Slide className='bg-blue-200'>2</Carousel.Slide>
+      <Carousel.Slide className='bg-blue-200'>3</Carousel.Slide>
+      {/* ...other slides */}
+    </Carousel>
     );
 }
 
