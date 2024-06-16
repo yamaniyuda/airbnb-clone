@@ -1,11 +1,9 @@
 .header {
-  @apply 
-    flex 
-    justify-between 
-    bg-white 
-    px-8
-    py-3
+  @apply
+    px-5
+    flex
+    justify-between
     items-center
-    border-b-[1px]
-    border-b-gray-200;
+    rounded-t-md
+  ;
 }

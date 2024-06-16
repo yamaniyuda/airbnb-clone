@@ -1,0 +1,25 @@
+.search_bar {
+  @apply
+    flex
+    flex-col
+    items-center
+    justify-center
+  ;
+}
+
+.search_bar__option {
+  @apply
+    flex
+    justify-center
+    my-5
+  ;
+  span {
+    @apply
+      cursor-pointer
+      py-2
+      px-3
+      hover:bg-gray-100
+      hover:rounded-full
+    ;
+  }
+}
