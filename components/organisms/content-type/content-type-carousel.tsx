@@ -2,7 +2,7 @@
 
 import { Carousel } from '@mantine/carousel';
 
-const ContentCarousel = () => {
+const ContentTypeCarousel = () => {
     return (
         <Carousel
         withIndicators
@@ -21,4 +21,4 @@ const ContentCarousel = () => {
     );
 }
 
-export default ContentCarousel;
+export default ContentTypeCarousel;

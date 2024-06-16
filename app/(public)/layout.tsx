@@ -23,9 +23,7 @@ const RootLayout: FC<RootLayoutProps> = ({children}) => {
       <body className={inter.className}>
         <MantineProvider>
           <Header />
-          <div className="h-[200vh] mt-[235px] bg-white">
-            <Content />
-          </div>
+          {children}
         </MantineProvider>
       </body>
     </html>
