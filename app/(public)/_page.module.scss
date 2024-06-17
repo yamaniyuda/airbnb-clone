@@ -1,4 +1,8 @@
 .page {
-  @apply relative
-    top-[23vh];
+  @apply 
+    relative
+    bg-white  
+    top-[18rem]
+    p-10
+  ;
 }

@@ -1,10 +1,10 @@
-import ContentType from "@/components/organisms/content-type/content-type";
 import styles from './_page.module.scss'
+import Content from "./components/content/content";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <div style={{height: '200vh'}}></div>
+      <Content />
     </div>
   );
 }

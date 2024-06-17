@@ -15,7 +15,7 @@ const categoryImage: string[] = [
 
 const IndicatorRight = () => {
   return (
-    <div className={styles.carauser_type__indicator}>
+    <div className={styles.carause_type__right}>
       <div className={styles.carause_type__icon}> 
         <IconArrowRight />
       </div>
@@ -26,7 +26,7 @@ const IndicatorRight = () => {
 
 const IndicatorLeft = () => {
   return (
-    <div className={styles.carauser_type__indicator}>
+    <div className={styles.carause_type__left}>
       <div className={styles.carause_type__icon}> 
         <IconArrowLeft />
       </div>
