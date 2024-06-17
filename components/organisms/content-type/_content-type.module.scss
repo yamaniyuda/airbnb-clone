@@ -1,7 +1,81 @@
 .carauser_type__container {
-  @apply
-    bg-white
+  @apply bg-white
     py-5
-    px-32
+    px-5;
+}
+
+.control_is_inactive {
+  &.carauser_type__container::before {
+    background: transparent;
+  }
+}
+
+.control {
+  background: none !important;
+  border: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  &[data-inactive] {
+    opacity: 0;
+    cursor: default;
+  }
+
+  &[data-inactive],
+  &[data-inactive]:hover {
+    opacity: 0 !important;
+    cursor: default;
+  }
+}
+
+.carauser_type__category {
+  @apply
+    flex
+    flex-col
+    items-center
   ;
+}
+
+
+.carauser_type__indicator {
+  @apply
+    grid
+    place-items-center
+    carause_type__right
+    h-[8vh]
+    w-[8vh]
+    -mt-4
+  ;
+}
+
+.carause_type__icon {
+  @apply
+    opacity-100
+    border-[1px]
+    bg-white
+    rounded-full
+    p-1
+    shadow-md
+  ;
+}
+
+.carause_type__right {
+  background: rgb(255,255,255);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 32%,
+    rgba(255, 255, 255, 0.7287289915966386) 70%,
+    rgba(0, 212, 255, 0) 100%,
+    rgba(255, 255, 255, 0.6138830532212884) 100%
+  );
+}
+
+.carause_type__left {
+  background: rgb(255,255,255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 32%,
+    rgba(255, 255, 255, 0.7287289915966386) 70%,
+    rgba(0, 212, 255, 0) 100%,
+    rgba(255, 255, 255, 0.6138830532212884) 100%
+  );
 }

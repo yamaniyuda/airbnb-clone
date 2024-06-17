@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import '@mantine/core/styles.css';
-@import '@mantine/carousel/styles.css';
 
 html {
   scroll-behavior: smooth;
@@ -36,6 +35,5 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-} 
+}
 */
-
