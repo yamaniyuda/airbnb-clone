@@ -39,3 +39,16 @@
     font-semibold
   ;
 }
+
+.header_content__fixed {
+  @apply
+    w-[100%]
+    h-[100%]
+    fixed
+    bg-black
+    left-0
+    right-0
+    -z-0
+    opacity-30
+  ;
+}

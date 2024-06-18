@@ -6,6 +6,7 @@ import { useSearchProviderComponent } from './search';
 import { Variants } from 'framer-motion';
 import styles from './_search.module.scss'
 import { inputCloseVariant, inputOpenVariant } from './_variant_data';
+import { SearchLogicKind } from './state/search-logic';
 
 
 const regionImageNames: string[] = [
@@ -14,7 +15,7 @@ const regionImageNames: string[] = [
 
 
 const SearchInputDestination: FC = () => {
-  const { searchLogic } = useSearchProviderComponent()
+  const { searchLogic, dispatchSearchLogic, showHeaderFixedHandler } = useSearchProviderComponent()
 
 
   const regionComponent = regionImageNames.map((data, key) => {
@@ -31,9 +32,10 @@ const SearchInputDestination: FC = () => {
   })
 
 
-  useEffect(() => {
-    console.log(searchLogic)
-  }, [searchLogic?.showSearch])
+  const hiddenContentClickHandler = () => {
+    showHeaderFixedHandler()
+    dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true })
+  }
 
 
   return (
@@ -66,6 +68,7 @@ const SearchInputDestination: FC = () => {
         variants={inputCloseVariant}
         animate={searchLogic!.showSearch ? "close" : "open"}
         className={styles.search_input_destination__close}
+        onClick={hiddenContentClickHandler}
       >
         <motion.span>Anywhere</motion.span>
       </motion.div>

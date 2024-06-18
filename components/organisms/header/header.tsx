@@ -22,6 +22,7 @@ const headerVariant: Variants = {
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [showBlackEl, setShowBlockEl] = useState<boolean>(false)
 
 
   useEffect(() => {
@@ -32,16 +33,23 @@ const Header: FC = () => {
   }, []);
   
 
+  const showBlockElHandler = () => {
+    setShowBlockEl(!showBlackEl)
+  }
+
+
   const handleScroll = () => {
     if (window.scrollY > 50) setIsScrolled(true);
     else setIsScrolled(false);
+    setShowBlockEl(false)
   };
 
   return (
     <motion.div initial={false} variants={headerVariant} animate={isScrolled ? "close" : "open"} className={styles.header_container}>
       <HeaderTop />
-      <HeaderContent />
+      <HeaderContent showBlockElHandler={showBlockElHandler} />
       <ContentType />
+      { showBlackEl && <div className={styles.header_content__fixed}></div> }
     </motion.div>
   );
 };

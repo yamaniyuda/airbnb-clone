@@ -1,3 +1,5 @@
+"use server"
+
 import ProductCard from "@/components/melecules/product-card";
 import { FC } from "react";
 import styles from "./content.module.scss"
@@ -9,15 +11,15 @@ const DUMMY_DATA: any = {
 }
 
 
-const CardProducts = Array(20).fill(null).map((_, key) => {
-  return (
-    <ProductCard key={key} {...DUMMY_DATA} />
-  )
-})
-
-
-
 const Content: FC = () => {
+
+  const CardProducts = Array(20).fill(null).map((_, key) => {
+    console.log(key)
+    return (
+      <ProductCard {...DUMMY_DATA} key={key} />
+    )
+  })
+  
 
   return (
     <div className={styles.content}>

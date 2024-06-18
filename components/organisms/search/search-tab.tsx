@@ -6,6 +6,7 @@
 import { FC, useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import styles from "./_search.module.scss";
+import { useSearchProviderComponent } from "./search";
 
 /**
  * @constant headerOptionVariant
@@ -41,32 +42,14 @@ const headerOptionVariant: Variants = {
  * @description A functional component that renders search options and handles their visibility based on scroll position.
  */
 const SearchTab: FC = () => {
-  // State to track if the window has been scrolled beyond a certain point
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  /**
-   * @function handleScroll
-   * @description Event handler for the window's scroll event. Updates the isScrolled state based on the scroll position.
-   */
-  const handleScroll = () => {
-    if (window.scrollY > 50) setIsScrolled(true);
-    else setIsScrolled(false);
-  };
-
-  // Use useEffect to add and clean up the scroll event listener
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { searchLogic } = useSearchProviderComponent()
 
   return (
     <motion.div
       className={styles.search_tab}
       initial={false}
       variants={headerOptionVariant}
-      animate={isScrolled ? "close" : "open"}
+      animate={searchLogic!.showSearch ? "open" : "close"}
     >
       <span className={styles.search_tab_option}>Stays</span>
       <span className={styles.search_tab_option}>Experiences</span>

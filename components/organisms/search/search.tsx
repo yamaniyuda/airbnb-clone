@@ -15,21 +15,26 @@ interface Guests {
 } 
 
 
+interface SearchProviderComponentProps {
+  showHeaderFixedHandler: VoidFunction
+}
+
+
 interface SearchProviderRef extends PayloadSearchAction {}
 
 
 interface SearchProviderComponent
   extends ForwardRefExoticComponent<
-    PropsWithoutRef<{}> & RefAttributes<SearchProviderRef>
+    PropsWithoutRef<SearchProviderComponentProps> & RefAttributes<SearchProviderRef>
   >{}
 
 
 
-interface SearchContextProps {
+interface SearchContextProps extends SearchProviderComponentProps {
   filterSearch: SearchProviderRef | null | any,
   dispatchFilterSearch: Function,
   searchLogic: PaylaodSearchLogic | null,
-  dispatchSearchLogic: Function
+  dispatchSearchLogic: Function,
 }
 
 
@@ -37,15 +42,16 @@ const SearchContext = createContext<SearchContextProps>({
   filterSearch: null,
   dispatchFilterSearch: () => {},
   searchLogic: null,
-  dispatchSearchLogic: () => {}
+  dispatchSearchLogic: () => {},
+  showHeaderFixedHandler: () => {}
 })
 
 
 const useSearchProviderComponent = () => useContext(SearchContext)
 
 
-const Search: SearchProviderComponent = forwardRef<SearchProviderRef, {}>(
-  (_, ref) => {
+const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProviderComponentProps>(
+  ({ showHeaderFixedHandler }, ref) => {
     const [filterSearch, dispatchFilterSearch] = useReducer(SearchReducer, InitialSearchReducer)
     const [searchLogic, dispatchSearchLogic] = useReducer(SearchLogic, InitialSearchLogic)
 
@@ -65,7 +71,7 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, {}>(
 
 
     return (
-      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic, dispatchSearchLogic }}>
+      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic, dispatchSearchLogic, showHeaderFixedHandler }}>
         <motion.div className={styles.search}>
           <SearchTab />
           <SearchInput />

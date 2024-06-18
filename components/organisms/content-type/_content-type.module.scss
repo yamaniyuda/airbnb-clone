@@ -31,17 +31,41 @@
   @apply
     flex
     flex-col
+    gap-y-3
     items-center
+    cursor-pointer
   ;
+  span {
+    @apply
+      text-[12px]
+      font-semibold
+      text-[#6A6A6A]
+    ;
+  }
+  &:hover span {
+    @apply
+      text-black
+    ;
+  }
+  img {
+    @apply
+      opacity-60
+    ;
+  }
+  &:hover img {
+    @apply
+      opacity-100
+    ;
+  }
 }
 
 
 .carauser_type__indicator {
   @apply
     grid
-    place-items-center
-    h-[8vh]
-    w-[8vh]
+    items-center
+    h-[9vh]
+    w-[10vh]
     -mt-4
   ;
 }
@@ -58,7 +82,7 @@
 }
 
 .carause_type__right {
-  @apply carauser_type__indicator;
+  @apply carauser_type__indicator justify-end;
   background: rgb(255,255,255);
   background: linear-gradient(
     270deg,
@@ -70,7 +94,7 @@
 }
 
 .carause_type__left {
-  @apply carauser_type__indicator;
+  @apply carauser_type__indicator justify-start;
   background: rgb(255,255,255);
   background: linear-gradient(
     90deg, 

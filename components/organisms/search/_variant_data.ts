@@ -55,7 +55,7 @@ export const searchInputVariant: Variants = {
   },
   "open": {
     width: "130vh",
-    height: "10vh",
+    height: "max-content",
     transition: {
       ease: "easeInOut",
       duration: .2,

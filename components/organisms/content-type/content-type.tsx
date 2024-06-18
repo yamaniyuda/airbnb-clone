@@ -40,7 +40,7 @@ const ContentType: FC = () => {
   const CategoryContentOptions = categoryImage.map((data, key) => {
     return (
       <Carousel.Slide key={key} className={styles.carauser_type__category}>
-        <Image width={20} height={20} src={`/category-icons/${data}.png`} alt="" />
+        <Image width={25} height={25} src={`/category-icons/${data}.png`} alt="" />
         <span>{data}</span>
       </Carousel.Slide>
     )
@@ -49,7 +49,6 @@ const ContentType: FC = () => {
   return (
     <Carousel
       height={50}
-      withIndicators
       className={styles.carauser_type__container}
       slideSize={'8%'}
       slidesToScroll={5}

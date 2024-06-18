@@ -13,6 +13,7 @@
 
 .product_card__image__container {
   box-sizing: content-box;
+  overflow: hidden; 
   @apply
     border
     rounded-xl
