@@ -3,12 +3,69 @@
     opacity: 0;
     cursor: default;
   }
+
+  @apply 
+    invisible
+  ;
+
+  transition: all .2s ease-out;
+}
+
+.root {
+  &:hover .control {
+    @apply 
+      visible
+    ;
+  }
 }
 
 .product_card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.indicator {
+  @apply 
+    w-[7px]
+    h-[7px]
+    rounded-full
+  ;
+  transition: width 250ms ease;
+}
+
+.product_card__btn_live {
+  @apply 
+    absolute
+    top-[5%]
+    left-[5%]
+    bg-slate-200
+    px-4
+    py-[.250rem]
+    rounded-full
+  ;
+}
+
+.product_card__btn {
+  @apply
+    absolute
+    top-[5%]
+    right-[5%]
+    bg-slate-200
+    w-[32px]
+    h-[32px]
+    flex
+    justify-center
+    items-center
+    z-10
+    rounded-full
+  ;
+
+  &:hover {
+    transition: all .2s ease-out;
+    background: white;
+    scale: 1.1;
+  }
 }
 
 .product_card__image__container {
