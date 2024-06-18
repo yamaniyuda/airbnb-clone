@@ -46,7 +46,7 @@ export const inputCloseVariant: Variants = {
 
 export const searchInputVariant: Variants = {
   "close": {
-    width: "60vh",
+    width: "400px",
     height: "7vh",
     transition: {
       ease: "easeInOut",
@@ -54,7 +54,7 @@ export const searchInputVariant: Variants = {
     },
   },
   "open": {
-    width: "130vh",
+    width: "851px",
     height: "max-content",
     transition: {
       ease: "easeInOut",
