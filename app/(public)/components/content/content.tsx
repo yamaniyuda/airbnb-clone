@@ -7,6 +7,7 @@ import styles from "./content.module.scss"
 const DUMMY_DATA: any = {
   title: "Open the Olympic Gaems",
   desc: "Hosted by Mathieu Lehanneur",
+  status: "Sold Out",
   img: ["/contents/icons/icon-1.png", "/contents/icons/icon-1.png", "/contents/icons/icon-1.png","/contents/icons/icon-1.png"],
 }
 
