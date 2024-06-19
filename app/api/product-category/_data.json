@@ -1,0 +1,368 @@
+[
+  {
+    "id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
+    "slug": "icons",
+    "name": "Icons",
+    "image": "icon-1.png"
+  },
+  {
+    "id": "d75bb82f-45a2-4d6b-a24c-c244a1e2a132",
+    "slug": "play",
+    "name": "Play",
+    "image": "icon-2.png"
+  },
+  {
+    "id": "8b3b3c1d-6dcb-4b2a-bd3a-33a3b0cb3323",
+    "slug": "omgi",
+    "name": "OMGI",
+    "image": "icon-3.png"
+  },
+  {
+    "id": "f45d3ef8-9b8e-4f6b-aea4-f2375d3cfae5",
+    "slug": "tropical",
+    "name": "Tropical",
+    "image": "icon-4.png"
+  },
+  {
+    "id": "aa1d9fef-c8f4-4b5c-b1ef-fb84c7d14a22",
+    "slug": "camping",
+    "name": "Camping",
+    "image": "icon-5.png"
+  },
+  {
+    "id": "7cf6a3b7-57d4-4e6b-8474-8c241d1d9f82",
+    "slug": "bed-breakfasts",
+    "name": "Bed & breakfasts",
+    "image": "icon-6.png"
+  },
+  {
+    "id": "9b2c4e4d-4d7f-4a8d-8b34-5c42aef7a6f4",
+    "slug": "design",
+    "name": "Design",
+    "image": "icon-7.png"
+  },
+  {
+    "id": "b38e7d6b-24f4-4b9c-b8d7-ec42e6d7c8b3",
+    "slug": "containers",
+    "name": "Containers",
+    "image": "icon-8.png"
+  },
+  {
+    "id": "d6e3b4f5-6c5a-4c9e-a2e4-d2c4b3f2a8e7",
+    "slug": "domes",
+    "name": "Domes",
+    "image": "icon-9.png"
+  },
+  {
+    "id": "cb2d6e7f-5a3b-4c9b-a5f2-d1e3b2c7e5f4",
+    "slug": "castles",
+    "name": "Castles",
+    "image": "icon-10.png"
+  },
+  {
+    "id": "e6b2d3c8-7f5a-4b3c-9e4d-8c2b5f1a7e4c",
+    "slug": "golfing",
+    "name": "Golfing",
+    "image": "icon-11.png"
+  },
+  {
+    "id": "c7d3e8b2-6a5f-4b9c-8e3d-5b2f7e4a6c3b",
+    "slug": "amazing-views",
+    "name": "Amazing views",
+    "image": "icon-12.png"
+  },
+  {
+    "id": "e5b3d2c8-7a6f-4c9b-8e4d-2b5f1a6c3b2d",
+    "slug": "dammual-countryside",
+    "name": "Dammual Countryside",
+    "image": "icon-13.png"
+  },
+  {
+    "id": "d8c3b2e7-5f6a-4c9b-8d2f-7b5e1a4c3b2f",
+    "slug": "trull",
+    "name": "Trull",
+    "image": "icon-14.png"
+  },
+  {
+    "id": "f3b2c8e7-6f5a-4b3d-8e2f-4b6d1a7c3e2b",
+    "slug": "beachfront",
+    "name": "Beachfront",
+    "image": "icon-15.png"
+  },
+  {
+    "id": "c2b5e8d3-4a6f-4b9d-8e3f-7c1b2e4a5f6d",
+    "slug": "tiny-homes",
+    "name": "Tiny homes",
+    "image": "icon-16.png"
+  },
+  {
+    "id": "d4b6e3f2-7a5c-4b9e-8d3f-1a4c5b6e7f2d",
+    "slug": "cabins",
+    "name": "Cabins",
+    "image": "icon-17.png"
+  },
+  {
+    "id": "e2b3d8f5-4a6c-4b9e-8f2d-7c1b5e6a4d3f",
+    "slug": "a-frames",
+    "name": "A-frames",
+    "image": "icon-18.png"
+  },
+  {
+    "id": "c8b3e7d5-6f4a-4b9e-8d3f-2b1c5e7a4d3f",
+    "slug": "amazing-pools",
+    "name": "Amazing pools",
+    "image": "icon-19.png"
+  },
+  {
+    "id": "d2e3b4f5-7a6c-4b9e-8f3d-5b1a6c7e4d2f",
+    "slug": "lake",
+    "name": "Lake",
+    "image": "icon-20.png"
+  },
+  {
+    "id": "f8c3b2e7-5a4f-4b9e-8d3f-6b1a5c7e4d2f",
+    "slug": "lakefront",
+    "name": "Lakefront",
+    "image": "icon-21.png"
+  },
+  {
+    "id": "c6b3e8f2-4a7d-4b9e-8f3d-1b5c7e6a2d3f",
+    "slug": "top-cities",
+    "name": "Top cities",
+    "image": "icon-22.png"
+  },
+  {
+    "id": "e4b3d2f8-7a6c-4b9e-8f3d-2b5c7a1e6d4f",
+    "slug": "luse",
+    "name": "Luse",
+    "image": "icon-23.png"
+  },
+  {
+    "id": "d3e8b2c7-6a5f-4b9e-8d3f-5b2c7a1e4d6f",
+    "slug": "beach",
+    "name": "Beach",
+    "image": "icon-24.png"
+  },
+  {
+    "id": "c8b5e3f2-4a7d-4b9e-8f3d-7c1a5e6b2d4f",
+    "slug": "campers",
+    "name": "Campers",
+    "image": "icon-25.png"
+  },
+  {
+    "id": "e2b8d3f5-6a4c-4b9e-8f3d-5c1a7e6b2d4f",
+    "slug": "islands",
+    "name": "Islands",
+    "image": "icon-26.png"
+  },
+  {
+    "id": "d4e3b2c8-7a6f-4b9e-8f3d-2c1b5e6a7d4f",
+    "slug": "nationalparks",
+    "name": "Nationalparks",
+    "image": "icon-27.png"
+  },
+  {
+    "id": "f8b3d2e7-5a6c-4b9e-8f3d-1c5a7e6b2d4f",
+    "slug": "arctic",
+    "name": "Arctic",
+    "image": "icon-28.png"
+  },
+  {
+    "id": "c7e3b2d8-4a6f-4b9e-8d3f-7b1a5c6e2d4f",
+    "slug": "surfing",
+    "name": "Surfing",
+    "image": "icon-29.png"
+  },
+  {
+    "id": "d2b8e3f5-6a7c-4b9e-8f3d-1b5c7e4a2d6f",
+    "slug": "caves",
+    "name": "Caves",
+    "image": "icon-30.png"
+  },
+  {
+    "id": "f3e8b2c7-5a4f-4b9e-8d3f-6b1a7c5e2d4f",
+    "slug": "trending",
+    "name": "Trending",
+    "image": "icon-31.png"
+  },
+  {
+    "id": "c4b3d8e7-7a6f-4b9e-8f3d-5c1a7e2b6d4f",
+    "slug": "rooms",
+    "name": "Rooms",
+    "image": "icon-32.png"
+  },
+  {
+    "id": "d8b3e2f7-6a4c-4b9e-8f3d-7c1a5e2b4d6f",
+    "slug": "treehouses",
+    "name": "Treehouses",
+    "image": "icon-33.png"
+  },
+  {
+    "id": "f2b3d8e5-7a6c-4b9e-8f3d-1b5c7e4a2d6f",
+    "slug": "new",
+    "name": "New",
+    "image": "icon-34.png"
+  },
+  {
+    "id": "c7b5e3f8-4a6f-4b9e-8d3f-6c1a2b5e7d4f",
+    "slug": "mansions",
+    "name": "Mansions",
+    "image": "icon-35.png"
+  },
+  {
+    "id": "e8b3d2f7-5a6c-4b9e-8f3d-7b1a2c6e4d3f",
+    "slug": "chefs-kitchens",
+    "name": "Chef's kitchens",
+    "image": "icon-36.png"
+  },
+  {
+    "id": "d3b2e8f5-6a4c-4b9e-8f3d-5c1a7b6e2d4f",
+    "slug": "earth-homes",
+    "name": "Earth homes",
+    "image": "icon-37.png"
+  },
+  {
+    "id": "f7e3b2c8-5a4f-4b9e-8d3f-2b1c5e6a7d4f",
+    "slug": "farms",
+    "name": "Farms",
+    "image": "icon-38.png"
+  },
+  {
+    "id": "c2b3d8e7-7a6c-4b9e-8f3d-6c1a7b2e4d5f",
+    "slug": "vineyards",
+    "name": "Vineyards",
+    "image": "icon-39.png"
+  },
+  {
+    "id": "d8b3e2f5-4a6c-4b9e-8f3d-5c1a7e2b6d4f",
+    "slug": "historical-homes",
+    "name": "Historical homes",
+    "image": "icon-40.png"
+  },
+  {
+    "id": "f2e8b3d7-6a4f-4b9e-8d3f-1c5a7b6e4d3f",
+    "slug": "skiing",
+    "name": "Skiing",
+    "image": "icon-41.png"
+  },
+  {
+    "id": "c7b3d8e5-5a6c-4b9e-8f3d-7c1a2b5e4d6f",
+    "slug": "hancks",
+    "name": "Hancks",
+    "image": "icon-42.png"
+  },
+  {
+    "id": "e3b2d8f5-6a4c-4b9e-8f3d-5c1a7e2b6d4f",
+    "slug": "top-of-the-world",
+    "name": "Top of the world",
+    "image": "icon-43.png"
+  },
+  {
+    "id": "d8b3e2f7-4a6c-4b9e-8f3d-6c1a7e2b5d4f",
+    "slug": "cycladic-homes",
+    "name": "Cycladic homes",
+    "image": "icon-44.png"
+  },
+  {
+    "id": "f3e8b2c5-6a4f-4b9e-8d3f-2b1a7c6e4d3f",
+    "slug": "ryokans",
+    "name": "Ryokans",
+    "image": "icon-45.png"
+  },
+  {
+    "id": "c5b3e2d7-7a6c-4b9e-8f3d-5c1a7b2e6d4f",
+    "slug": "shepherds-huts",
+    "name": "Shepherd's huts",
+    "image": "icon-46.png"
+  },
+  {
+    "id": "d3b2e8f5-6a4c-4b9e-8f3d-1c5a7e2b4d6f",
+    "slug": "windmills",
+    "name": "Windmills",
+    "image": "icon-47.png"
+  },
+  {
+    "id": "f7e3b2c8-5a4f-4b9e-8d3f-2b1c5e6a7d4f",
+    "slug": "casas-particulares",
+    "name": "Casas particulares",
+    "image": "icon-48.png"
+  },
+  {
+    "id": "c2b3d8e7-7a6c-4b9e-8f3d-6c1a7b2e4d5f",
+    "slug": "off-the-grid",
+    "name": "Off-the-grid",
+    "image": "icon-49.png"
+  },
+  {
+    "id": "d8b3e2f5-4a6c-4b9e-8f3d-5c1a7e2b6d4f",
+    "slug": "minous",
+    "name": "Minous",
+    "image": "icon-50.png"
+  },
+  {
+    "id": "f2e8b3d7-6a4f-4b9e-8d3f-1c5a7b6e4d3f",
+    "slug": "grand-plans",
+    "name": "Grand plans",
+    "image": "icon-51.png"
+  },
+  {
+    "id": "c7b3d8e5-5a6c-4b9e-8f3d-7c1a2b5e4d6f",
+    "slug": "towers",
+    "name": "Towers",
+    "image": "icon-52.png"
+  },
+  {
+    "id": "e3b2d8f5-6a4c-4b9e-8f3d-5c1a7e2b6d4f",
+    "slug": "bama",
+    "name": "Bama",
+    "image": "icon-53.png"
+  },
+  {
+    "id": "d8b3e2f7-4a6c-4b9e-8f3d-6c1a7e2b5d4f",
+    "slug": "desert",
+    "name": "Desert",
+    "image": "icon-54.png"
+  },
+  {
+    "id": "f3e8b2c5-6a4f-4b9e-8d3f-2b1a7c6e4d3f",
+    "slug": "yurts",
+    "name": "Yurts",
+    "image": "icon-55.png"
+  },
+  {
+    "id": "c5b3e2d7-7a6c-4b9e-8f3d-5c1a7b2e6d4f",
+    "slug": "boats",
+    "name": "Boats",
+    "image": "icon-56.png"
+  },
+  {
+    "id": "d3b2e8f5-6a4c-4b9e-8f3d-1c5a7e2b4d6f",
+    "slug": "adapted",
+    "name": "Adapted",
+    "image": "icon-57.png"
+  },
+  {
+    "id": "f7e3b2c8-5a4f-4b9e-8d3f-2b1c5e6a7d4f",
+    "slug": "ski-in-out",
+    "name": "Ski in/out",
+    "image": "icon-58.png"
+  },
+  {
+    "id": "c2b3d8e7-7a6c-4b9e-8f3d-6c1a7b2e4d5f",
+    "slug": "houseboats",
+    "name": "Houseboats",
+    "image": "icon-59.png"
+  },
+  {
+    "id": "d8b3e2f5-4a6c-4b9e-8f3d-5c1a7e2b6d4f",
+    "slug": "creative-spaces",
+    "name": "Creative spaces",
+    "image": "icon-60.png"
+  },
+  {
+    "id": "f2e8b3d7-6a4f-4b9e-8d3f-1c5a7b6e4d3f",
+    "slug": "riads",
+    "name": "Riads",
+    "image": "icon-61.png"
+  }
+]
