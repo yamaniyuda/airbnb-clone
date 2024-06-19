@@ -1,6 +1,6 @@
 import { Handler, ResponeGetBody } from "../_model";
 import { NextResponse } from "next/server";
-import { GetParams, ProductCategory } from "./_model";
+import { ProductCategory } from "./_model";
 import data from "./_data.json";
 import Helper from "../_helpers";
 

@@ -9,7 +9,7 @@ type CurrentTabOn = "stays" | "experiences" | "online-experiences";
 interface Payloads {
   showSearch: boolean;
   shwoInputSearch: boolean;
-  showCurrentTab: CurrentTabOn
+  showCurrentTab: CurrentTabOn | null
 }
 
 
@@ -49,7 +49,7 @@ const SearchLogic = (state: Payloads, action: SearchAction): Payloads => {
 
 
 const InitialSearchLogic: Payloads = {
-  showCurrentTab: 'stays',
+  showCurrentTab: null,
   showSearch: true,
   shwoInputSearch: true
 };
