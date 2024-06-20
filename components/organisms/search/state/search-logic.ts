@@ -5,17 +5,18 @@ enum SearchLogicKind {
 }
 
 type CurrentTabOn = "stays" | "experiences" | "online-experiences";
+type CurrentInputOn = "destination" | "date" | "guest"
 
 interface Payloads {
   showSearch: boolean;
-  shwoInputSearch: boolean;
+  shwoInputSearch: CurrentInputOn | null;
   showCurrentTab: CurrentTabOn | null
 }
 
 
 interface SearchAction {
   type: SearchLogicKind;
-  payload: boolean | CurrentTabOn;
+  payload: boolean | CurrentTabOn | null;
 }
 
 
@@ -51,7 +52,7 @@ const SearchLogic = (state: Payloads, action: SearchAction): Payloads => {
 const InitialSearchLogic: Payloads = {
   showCurrentTab: null,
   showSearch: true,
-  shwoInputSearch: true
+  shwoInputSearch: null
 };
 
 

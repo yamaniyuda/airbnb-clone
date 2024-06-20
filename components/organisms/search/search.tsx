@@ -59,6 +59,8 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProv
     const handleScroll = () => {
       if (window.scrollY > 50) dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false });
       else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
+      dispatchSearchLogic({ type: SearchLogicKind.SHOWCURRENTTAB, payload: null })
+      dispatchSearchLogic({ type: SearchLogicKind.SHOWINPUTSEARCH, payload: null })
     };
   
   

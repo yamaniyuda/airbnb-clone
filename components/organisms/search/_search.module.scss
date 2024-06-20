@@ -31,9 +31,21 @@
     border-[1px]
     rounded-full
     relative
+    overflow-hidden
     shadow-md
     flex
   ;
+}
+
+.search_input__click {
+  @apply
+    bg-[#ebebeb]
+  ;
+  input {
+    @apply
+      bg-[#ebebeb]
+    ;
+  }
 }
 
 .search_input_button {
@@ -63,6 +75,29 @@
     @apply
       text-[14px]
       focus:outline-none
+    ;
+  }
+}
+
+
+.search_input_button__active {
+  @apply
+    bg-white
+    rounded-full
+    hover:bg-white
+    border-[1px]
+    shadow-md	
+  ;
+
+  input {
+    @apply
+      bg-white
+    ;
+  }
+
+  &:hover input {
+    @apply
+      bg-white
     ;
   }
 }
@@ -170,6 +205,18 @@
   }
 }
 
+.search_input_button__date__left {
+  @apply
+    search_input_button__date
+  ;
+}
+
+.search_input_button__date__right {
+  @apply
+    search_input_button__date
+  ;
+}
+
 /* search-input-guest.tsx */
 .search_input_guest__container {
   @apply
@@ -230,4 +277,70 @@
   stroke: white; 
   stroke-width: 4; 
   overflow: visible;
+}
+
+.search_input_guest_child__plus__btn {
+  @apply
+    border-[1px]
+    border-gray-300
+    rounded-full
+  ;
+}
+
+
+.search_input_guest__container__modal {
+  @apply
+    p-8
+    rounded-2xl
+    shadow-md
+  ;
+}
+
+.search_input_guest__input {
+  @apply
+    flex
+    p-2
+    justify-between
+  ;
+}
+
+.search_input_guest__input__text {
+  @apply
+    flex
+    justify-center
+    flex-col
+  ;
+
+  span {
+    &:nth-child(1) {
+      @apply
+        text-[16px]
+        font-bold
+        text-[#222222]
+      ;
+    }
+    &:nth-child(2) {
+      @apply
+        text-[14px]
+        text-[#6A6A6A]
+      ;
+    }
+  }
+}
+
+.search_input_guest__input__container {
+  @apply
+    p-5
+    flex
+    justify-between
+    items-center
+    w-32
+  ;
+}
+
+.search_input_guest__input__border_bottom {
+  @apply
+    w-[100%]
+    border-[0.5px]
+  ;
 }

@@ -21,7 +21,7 @@ const RootLayout: FC<RootLayoutProps> = ({children}) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MantineProvider>
+        <MantineProvider defaultColorScheme="light">
           <Header />
           {children}
         </MantineProvider>

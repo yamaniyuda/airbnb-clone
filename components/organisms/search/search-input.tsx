@@ -17,7 +17,10 @@ const SearchInput: FC = () => {
       initial={"open"}
       variants={searchInputVariant}
       animate={searchLogic?.showSearch ? "open" : "close"}
-      className={styles.search_input}
+      className={`
+        ${styles.search_input}
+        ${ searchLogic!.shwoInputSearch !== null && styles.search_input__click }  
+      `}
     >
       <SearchInputDestination />
       <SearchInputDate />

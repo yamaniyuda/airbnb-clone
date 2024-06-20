@@ -1,9 +1,8 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Menu, UnstyledButton, rem, Text, CheckboxCard, Group, Checkbox } from '@mantine/core';
 import Image from 'next/image';
 import { motion } from 'framer-motion'
 import { useSearchProviderComponent } from './search';
-import { Variants } from 'framer-motion';
 import styles from './_search.module.scss'
 import { inputCloseVariant, inputOpenVariant } from './_variant_data';
 import { SearchLogicKind } from './state/search-logic';
@@ -35,6 +34,12 @@ const SearchInputDestination: FC = () => {
   const hiddenContentClickHandler = () => {
     showHeaderFixedHandler()
     dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true })
+    setTimeout(() => buttonOnClickHandler(), 300)
+  }
+
+
+  const buttonOnClickHandler = () => {
+    dispatchSearchLogic({ type: SearchLogicKind.SHOWINPUTSEARCH, payload: 'destination' })
   }
 
 
@@ -44,10 +49,16 @@ const SearchInputDestination: FC = () => {
         initial={false}
         variants={inputOpenVariant}
         animate={searchLogic?.showSearch ? "open" : "close"}
-      >
-        <Menu withArrow>
+      > 
+        <Menu opened={searchLogic?.shwoInputSearch === 'destination'}>
           <Menu.Target>
-            <UnstyledButton className={styles.search_input_button}>
+            <UnstyledButton 
+              onClick={buttonOnClickHandler} 
+              className={`
+                ${styles.search_input_button}
+                ${searchLogic?.shwoInputSearch === 'destination' && styles.search_input_button__active}  
+              `}
+            >
               <label htmlFor="destination">Where</label>
               <input type="text" id='destination' placeholder='Search destinations' />
             </UnstyledButton>
