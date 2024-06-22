@@ -1,5 +1,5 @@
 import { Handler, ResponeGetBody } from "../_model";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { ProductCategory } from "./_model";
 import data from "./_data.json";
 import Helper from "../_helpers";
@@ -7,7 +7,7 @@ import { NextApiRequest } from "next";
 
 
 
-export const GET = async (request: NextApiRequest) => {
+export const GET = (request: NextRequest) => {
   let dataBuild = data
   let page = 1
   let per_page = data.length
