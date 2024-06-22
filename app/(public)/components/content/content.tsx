@@ -25,5 +25,6 @@ const Content: FC = () => {
   return <div className={styles.content}>{CardProducts}</div>;
 };
 
+
 export default Content;
  
