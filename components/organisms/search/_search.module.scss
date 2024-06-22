@@ -55,6 +55,7 @@
     cursor-pointer
     flex
     flex-col
+    w-[100%]
     hover:bg-gray-100
     hover:rounded-full
   ;
@@ -151,6 +152,7 @@
     place-items-center
     h-[100%]
     px-5
+    w-[8rem]
     py-3
   ;
 }
@@ -223,6 +225,7 @@
     flex
     items-center
     relative
+    w-[100%]
   ;
 }
 

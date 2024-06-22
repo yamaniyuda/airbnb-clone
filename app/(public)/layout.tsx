@@ -4,7 +4,7 @@ import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import { FC } from "react";
 import Header from "../../components/organisms/header/header";
-import ContentType from "../../components/organisms/content-type/content-type";
+
 
 interface RootLayoutProps extends Readonly<{
   children: React.ReactNode
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<RootLayoutProps> = ({children}) => {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className={inter.className}>
         <MantineProvider defaultColorScheme="light">
           <Header />

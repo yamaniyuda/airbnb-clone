@@ -31,6 +31,7 @@ const SearchInputGuest: FC = () => {
         initial={false}
         variants={inputOpenVariant}
         animate={searchLogic?.showSearch ? "open" : "close"}
+        className="w-[100%]"
       >
         <Menu opened={searchLogic?.shwoInputSearch === 'guest'}>
           <Menu.Target>

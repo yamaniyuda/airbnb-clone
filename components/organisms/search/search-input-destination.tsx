@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { Menu, UnstyledButton, rem, Text, CheckboxCard, Group, Checkbox } from '@mantine/core';
 import Image from 'next/image';
 import { motion } from 'framer-motion'

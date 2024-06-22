@@ -1,6 +1,7 @@
-import ProductCard from "@/components/melecules/product-card";
 import { FC } from "react";
 import styles from "./content.module.scss";
+import dynamic from "next/dynamic";
+import ProductCard from "@/components/melecules/product-card";
 
 const DUMMY_DATA: any = {
   title: "Open the Olympic Gaems",
