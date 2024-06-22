@@ -1,5 +1,4 @@
-import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export interface ResponeGetBody<T> {
   total: number;
@@ -14,6 +13,6 @@ export interface GetGlobalParams {
 }
 
 export type Handler<T, U = undefined> = (
-  request: NextApiRequest,
+  request: NextRequest,
   context: { params: U } | undefined,
 ) => Promise<NextResponse<T>>;
