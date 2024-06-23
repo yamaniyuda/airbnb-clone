@@ -21,7 +21,7 @@ const ProductCard: FC<ProductCardProps> = ({ date, desc, status, img, price, ran
 
   const imageCarauserSlider = img.map((data, key) => {
     return (
-      <Carousel.Slide>
+      <Carousel.Slide key={key}>
         <div>
           <Image
             src={data}
