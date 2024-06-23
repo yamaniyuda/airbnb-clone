@@ -2,6 +2,9 @@ import { FC } from "react";
 import styles from "./content.module.scss";
 import dynamic from "next/dynamic";
 import ProductCard from "@/components/melecules/product-card";
+import querystring from "querystring";
+import getConfig from 'next/config';
+import { headers } from "next/headers";
 
 const DUMMY_DATA: any = {
   title: "Open the Olympic Gaems",
@@ -15,16 +18,32 @@ const DUMMY_DATA: any = {
   ],
 };
 
-const Content: FC = () => {
-  const CardProducts = Array(20)
-    .fill(null)
-    .map((_, key) => {
-      return <ProductCard {...DUMMY_DATA} key={`product-${key}`} />;
-    });
+interface ContentProps {
+  searchParams: any;
+}
 
-  return <div className={styles.content}>{CardProducts}</div>;
-};
+export default async function Content(params: ContentProps) {
+  const hostName =  "http://" + headers().get('host');
+  const data = await fetch(
+    hostName + "/api/product?" + querystring.stringify(params.searchParams),
+  ).then(res => res.json());
 
+  console.log(data)
 
-export default Content;
- 
+  return (
+    <div className={styles.content}>
+      {data.data.map((dt: any, key: number) => (
+        <ProductCard
+          title={dt.name}
+          date={dt.date}
+          desc={dt.front_desc}
+          img={dt.images}
+          price={dt.price}
+          ranting={dt.ranting}
+          status="false"
+          key={key}
+        />
+      ))}
+    </div>
+  );
+}

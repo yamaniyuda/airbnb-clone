@@ -6,18 +6,6 @@
     "icon": "bad.svg"
   },
   {
-    "id": "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-    "name": "Sleep your anxiety away!",
-    "desc": "Whether you’re joyful or anxious, there’s a perfect bedroom to stay in!",
-    "icon": "bad.svg"
-  },
-  {
-    "id": "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-    "name": "Sleep your anxiety away!",
-    "desc": "Whether you’re joyful or anxious, there’s a perfect bedroom to stay in!",
-    "icon": "bad.svg"
-  },
-  {
     "id": "f25fa172-a78c-42d4-aefa-11692528bea4",
     "name": "Get a look into Prince’s world",
     "desc": "Enjoy a private tour of the Purple Rain house filled with Prince’s keepsakes.",
@@ -48,15 +36,75 @@
     "icon": "star.svg"
   },
   {
-    "id": "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-    "name": "Sleep your anxiety away!",
-    "desc": "Whether you’re joyful or anxious, there’s a perfect bedroom to stay in!",
-    "icon": "bad.svg"
+    "id": "5bf78edc-ef21-4dec-8538-afd2703f6fa8",
+    "name": "Dedicated workspace",
+    "desc": "A common area with wifi that’s well-suited for working.",
+    "icon": "workspace.svg"
   },
   {
-    "id": "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-    "name": "Sleep your anxiety away!",
-    "desc": "Whether you’re joyful or anxious, there’s a perfect bedroom to stay in!",
-    "icon": "bad.svg"
+    "id": "4605ad8f-3386-451c-bcb0-6a7ca6d97ea4",
+    "name": "Carolyn is a Superhost",
+    "desc": "Superhosts are experienced, highly rated Hosts.",
+    "icon": "carolyn.svg"
+  },
+  {
+    "id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
+    "name": "Hair dryer",
+    "desc": null,
+    "icon": "hair-dryer.svg"
+  },
+  {
+    "id": "54f19f6a-1b8e-4b42-8d31-6fa417f607e8",
+    "name": "Bathtub",
+    "desc": null,
+    "icon": "bathtub.svg"
+  },
+  {
+    "id": "6d48c48d-8fa0-4a68-b1c6-1c31b1b8a69d",
+    "name": "Washer",
+    "desc": null,
+    "icon": "washer.svg"
+  },
+  {
+    "id": "b2066d01-06f2-4f99-bf90-69b59a01e0a6",
+    "name": "Dryer",
+    "desc": null,
+    "icon": "dryer.svg"
+  },
+  {
+    "id": "b926de2e-5bc8-4a4c-928d-1aefb9022c5f",
+    "name": "Clothing storage",
+    "desc": null,
+    "icon": "clothing-storage.svg"
+  },
+  {
+    "id": "dd8ef3f1-5891-42e5-9e5c-60e8e32c1d14",
+    "name": "Ethernet  connection",
+    "desc": null,
+    "icon": "ethernet.svg"
+  },
+  {
+    "id": "5e21f3aa-28fe-46d0-988f-2ecb9eaafe64",
+    "name": "Standalone high chair",
+    "desc": null,
+    "icon": "standalone-hight-chair.svg"
+  },
+  {
+    "id": "1f9ec146-21b4-4e56-8f4d-380f66b23a88",
+    "name": "Private enthrance",
+    "desc": null,
+    "icon": "private-entrance.svg"
+  },
+  {
+    "id": "a0ea4338-1d44-48a3-8df1-6ef1dbfd7ccf",
+    "name": "Carolyn is a Superhost",
+    "desc": null,
+    "icon": "carolyn.svg"
+  },
+  {
+    "id": "f1e1181c-9eab-45e1-8a6d-40a3a0f3d9e5",
+    "name": "Carolyn is a Superhost",
+    "desc": null,
+    "icon": "carolyn.svg"
   }
 ]

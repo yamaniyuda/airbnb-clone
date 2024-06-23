@@ -13,7 +13,7 @@ def download_image(url, folder):
     try:
         response = requests.get(url)
         response.raise_for_status()  # Jika status_code bukan 200, akan memunculkan HTTPError
-        file_name = os.path.join(folder, f"{folder}-{uuid.uuid4().hex[:8]}.jpg")
+        file_name = os.path.join(folder, f"{uuid.uuid4().hex[:8]}.jpg")
         with open(file_name, 'wb') as f:
             f.write(response.content)
     except requests.HTTPError as e:

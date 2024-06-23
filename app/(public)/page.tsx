@@ -1,10 +1,15 @@
+import { Suspense } from "react";
 import styles from "./_page.module.scss";
 import Content from "./components/content/content";
 
-export default function Home() {
+
+export default async function Home({ searchParams }: {[key: string]: string | string[] | undefined}) {
+
   return (
     <div className={styles.page}>
-      <Content />
+      <Suspense>
+        <Content searchParams={searchParams} />
+      </Suspense>
     </div>
   );
 }

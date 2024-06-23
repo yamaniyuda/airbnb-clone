@@ -18,13 +18,14 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ date, desc, status, img, price, ranting, title }) => {
 
+  console.log(img)
 
   const imageCarauserSlider = img.map((data, key) => {
     return (
       <Carousel.Slide key={key}>
         <div>
           <Image
-            src={data}
+            src={'/contents/' + data}
             height={200}
             alt="Norway"
             width={200}
