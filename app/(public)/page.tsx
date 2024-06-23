@@ -6,7 +6,9 @@ import ProductCard from "@/components/melecules/product-card";
 export default async function Home({ searchParams }: any) {
   const data = await fetch(process.env.HOSTNAME + "/api/product?").then((res) =>
     res.json(),
-  ).catch(d => d);
+  ).catch(d => {
+    return d
+  });
 
   return (
     <div className={styles.page}>
@@ -15,8 +17,8 @@ export default async function Home({ searchParams }: any) {
     grid-cols-4
     gap-5"
       >
-        {data}
-        {data.data.map((dt: any, key: number) => (
+        {JSON.stringify(data)}
+        {/* {data?.data?.map((dt: any, key: number) => (
           <ProductCard
             title={dt.name}
             date={dt.date}
@@ -27,7 +29,7 @@ export default async function Home({ searchParams }: any) {
             status="false"
             key={key}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
