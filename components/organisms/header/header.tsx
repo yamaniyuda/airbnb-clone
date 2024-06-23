@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useEffect, useState } from "react";
+import { FC, Suspense, useEffect, useState } from "react";
 import HeaderTop from "./header-top";
 import HeaderContent from "./header-content";
 import { motion, Variants } from "framer-motion"
@@ -46,9 +46,11 @@ const Header: FC = () => {
 
   return (
     <motion.div initial={false} variants={headerVariant} animate={isScrolled ? "close" : "open"} className={styles.header_container}>
-      <HeaderTop />
-      <HeaderContent showBlockElHandler={showBlockElHandler} />
-      <ContentType />
+      <Suspense>
+        <HeaderTop />
+        <HeaderContent showBlockElHandler={showBlockElHandler} />
+        <ContentType />
+      </Suspense>
       { showBlackEl && <div className={styles.header_content__fixed}></div> }
     </motion.div>
   );

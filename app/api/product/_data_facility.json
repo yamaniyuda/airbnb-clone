@@ -42,10 +42,10 @@
     "icon": "eat.svg"
   },
   {
-    "id": "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-    "name": "Sleep your anxiety away!",
-    "desc": "Whether you’re joyful or anxious, there’s a perfect bedroom to stay in!",
-    "icon": "bad.svg"
+    "id": "38786ba8-9f3e-4638-8a12-9a63823248ea",
+    "name": "Create your own memory orb!",
+    "desc": "Design an orb to store your core memory—and then take it home with you!",
+    "icon": "star.svg"
   },
   {
     "id": "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
@@ -58,5 +58,5 @@
     "name": "Sleep your anxiety away!",
     "desc": "Whether you’re joyful or anxious, there’s a perfect bedroom to stay in!",
     "icon": "bad.svg"
-  },
+  }
 ]
