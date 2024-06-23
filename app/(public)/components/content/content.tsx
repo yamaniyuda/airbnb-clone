@@ -1,10 +1,8 @@
-import { FC } from "react";
 import styles from "./content.module.scss";
-import dynamic from "next/dynamic";
 import ProductCard from "@/components/melecules/product-card";
 import querystring from "querystring";
-import getConfig from 'next/config';
 import { headers } from "next/headers";
+
 
 const DUMMY_DATA: any = {
   title: "Open the Olympic Gaems",
@@ -24,8 +22,7 @@ interface ContentProps {
 
 export default async function Content(params: ContentProps) {
   const hostName =  "http://" + headers().get('host');
-  const data = await fetch(
-    "/api/product?" + querystring.stringify(params.searchParams),
+  const data = await fetch(process.env.HOSTNAME + "/api/product?" + querystring.stringify(params.searchParams),
   ).then(res => {console.log(res); return res.json()});
 
 
