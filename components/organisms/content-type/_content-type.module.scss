@@ -1,7 +1,7 @@
 .carauser_type__container {
   @apply bg-white
     py-3
-    px-5;
+    px-10;
 }
 
 .control_is_inactive {
@@ -17,6 +17,8 @@
   box-shadow: none !important;
   &[data-inactive] {
     opacity: 0;
+    width: 1px;
+    height: 1px;
     cursor: default;
   }
 
@@ -28,62 +30,49 @@
 }
 
 .carauser_type__category {
-  @apply
-    flex
+  @apply flex
     flex-col
-    gap-y-3
+    py-1
+    mx-5
     items-center
-    cursor-pointer
-  ;
+    cursor-pointer;
   span {
-    @apply
-      text-[12px]
+    @apply text-[12px]
       font-semibold
-      text-[#6A6A6A]
-    ;
+      text-[#6A6A6A];
   }
   &:hover span {
-    @apply
-      text-black
-    ;
+    @apply text-black;
   }
   img {
-    @apply
-      opacity-60
-    ;
+    @apply opacity-70;
   }
   &:hover img {
-    @apply
-      opacity-100
-    ;
+    @apply opacity-100;
   }
 }
 
-
 .carauser_type__indicator {
-  @apply
-    grid
+  @apply grid
     items-center
     h-[9vh]
     w-[10vh]
-    -mt-4
-  ;
+    -mt-4;
 }
 
 .carause_type__icon {
-  @apply
-    opacity-100
+  @apply opacity-100
     border-[1px]
     bg-white
     rounded-full
     p-1
-    shadow-md
-  ;
+    hover:shadow-sm
+    hover:scale-105;
 }
 
 .carause_type__right {
   @apply carauser_type__indicator justify-end;
-  background: rgb(255,255,255);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
     270deg,
     rgba(255, 255, 255, 1) 32%,
@@ -95,12 +84,21 @@
 
 .carause_type__left {
   @apply carauser_type__indicator justify-start;
-  background: rgb(255,255,255);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-    90deg, 
-    rgba(255,255,255,1) 32%, 
-    rgba(255,255,255,0.7287289915966386) 70%, 
-    rgba(0,212,255,0) 100%, 
-    rgba(255,255,255,0.6138830532212884) 100%
+    90deg,
+    rgba(255, 255, 255, 1) 32%,
+    rgba(255, 255, 255, 0.7287289915966386) 70%,
+    rgba(0, 212, 255, 0) 100%,
+    rgba(255, 255, 255, 0.6138830532212884) 100%
   );
+}
+
+.carause_type__active {
+  img {
+    @apply opacity-100;
+  }
+  span {
+    @apply text-black border-b-2 border-black;
+  }
 }

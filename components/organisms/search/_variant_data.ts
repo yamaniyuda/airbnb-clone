@@ -44,6 +44,7 @@ export const inputCloseVariant: Variants = {
   }
 }
 
+
 export const searchInputVariant: Variants = {
   "close": {
     width: "400px",

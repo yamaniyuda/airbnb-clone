@@ -1,64 +1,99 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useCallback, useMemo } from "react";
 import { Carousel } from "@mantine/carousel";
 import Image from "next/image";
-import styles from './_content-type.module.scss'
-import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
-import '@mantine/carousel/styles.css';
-import { rem } from "@mantine/core";
+import styles from "./_content-type.module.scss";
+import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react";
+import useSWR from "swr";
+import { Skeleton } from "@mantine/core";
+import { ProductCategory } from "@/app/api/product-category/_model";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import "@mantine/carousel/styles.css";
 
-const categoryImage: string[] = [
-  'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles', 'icons', 'castles',
-]
-
-
-const IndicatorRight = () => {
-  return (
-    <div className={styles.carause_type__right}>
-      <div className={styles.carause_type__icon}> 
-        <IconArrowRight />
-      </div>
+const IndicatorRight = () => (
+  <div className={styles.carause_type__right}>
+    <div className={styles.carause_type__icon}>
+      <IconArrowRight />
     </div>
-  )
-}
+  </div>
+);
 
-
-const IndicatorLeft = () => {
-  return (
-    <div className={styles.carause_type__left}>
-      <div className={styles.carause_type__icon}> 
-        <IconArrowLeft />
-      </div>
+const IndicatorLeft = () => (
+  <div className={styles.carause_type__left}>
+    <div className={styles.carause_type__icon}>
+      <IconArrowLeft />
     </div>
-  )
-}
+  </div>
+);
 
+const LoadingComponent: FC = () => (
+  <div className="mx-3 flex flex-col justify-center items-center">
+    <Skeleton height={30} circle className="mb-2" />
+    <Skeleton height={10} radius="xl" width={50} />
+  </div>
+);
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const ContentType: FC = () => {
+  const { data, isLoading } = useSWR("/api/product-category", fetcher);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const CategoryContentOptions = categoryImage.map((data, key) => {
-    return (
-      <Carousel.Slide key={key} className={styles.carauser_type__category}>
-        <Image width={25} height={25} src={`/category-icons/${data}.png`} alt="" />
-        <span>{data}</span>
-      </Carousel.Slide>
-    )
-  })
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+      return params.toString();
+    },
+    [searchParams]
+  );
+
+
+  const selectedProductType = useMemo(() => {
+    console.log(searchParams.get("product-type"))
+    return searchParams.get("product-type")
+  }, [searchParams])
+
+
+  const onClickHandler = (slug: string) => {
+    router.push(pathname + "?" + createQueryString("product-type", slug));
+  };
+
 
   return (
     <Carousel
       height={50}
       className={styles.carauser_type__container}
-      slideSize={'8%'}
+      slideSize="max-content"
       slidesToScroll={5}
-      controlsOffset="xs" 
-      align={'start'}
+      controlsOffset="xl"
+      align="start"
       nextControlIcon={<IndicatorRight />}
       previousControlIcon={<IndicatorLeft />}
       classNames={{ control: styles.control }}
     >
-      {CategoryContentOptions}
+      {isLoading
+        ? new Array(20).fill(0).map((_, key) => <LoadingComponent key={key} />)
+        : data?.data?.map((dt: ProductCategory, key: number) => (
+            <Carousel.Slide
+              key={key}
+              onClick={() => onClickHandler(dt.slug)}
+              className={`${styles.carauser_type__category} ${
+                dt.slug === selectedProductType ? styles.carause_type__active : ""
+              }`}
+            >
+              <Image
+                width={25}
+                height={25}
+                src={`/category-icons/${dt.image}`}
+                alt={dt.name}
+              />
+              <span>{dt.name}</span>
+            </Carousel.Slide>
+          ))}
     </Carousel>
   );
 };
