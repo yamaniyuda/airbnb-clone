@@ -4,11 +4,8 @@ import Content from "./components/content/content";
 import ProductCard from "@/components/melecules/product-card";
 
 export default async function Home({ searchParams }: any) {
-  const data = await fetch(process.env.HOSTNAME + "/api/product?").then((res) =>
-    res.json(),
-  ).catch(d => {
-    return d
-  });
+  const res = await fetch(process.env.HOSTNAME + "/api/product?")
+  const data = await res.json()
 
   return (
     <div className={styles.page}>
