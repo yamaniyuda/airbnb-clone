@@ -1,6 +1,6 @@
 import styles from "./content.module.scss";
 import ProductCard from "@/components/melecules/product-card";
-import querystring from "querystring";
+// import querystring from "querystring";
 
 interface ContentProps {
   searchParams: any;
@@ -9,8 +9,7 @@ interface ContentProps {
 export default async function Content(params: ContentProps) {
   const data = await fetch(
     process.env.HOSTNAME +
-      "/api/product?" +
-      querystring.stringify(params.searchParams),
+      "/api/product?" ,
   ).then((res) => res.json());
 
   return (
