@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Box, Menu, UnstyledButton } from '@mantine/core';
 import styles from './_search.module.scss'
 import { Variants, motion } from 'framer-motion';
@@ -10,6 +10,7 @@ import { SearchLogicKind } from './state/search-logic';
 
 const SearchInputDate: FC = () => {
   const { searchLogic, dispatchSearchLogic, showHeaderFixedHandler } = useSearchProviderComponent()
+
 
   const buttonOnClickHandler = () => {
     dispatchSearchLogic({ type: SearchLogicKind.SHOWINPUTSEARCH, payload:'date' })
@@ -49,7 +50,7 @@ const SearchInputDate: FC = () => {
           </Menu.Target>
 
           <Menu.Dropdown className={styles.search_input_destination__container}>
-            <DatePicker type="range" numberOfColumns={2}  />
+            <DatePicker type="range" />
           </Menu.Dropdown>
         </Menu>
       </motion.div>
