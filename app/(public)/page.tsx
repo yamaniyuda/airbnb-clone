@@ -18,6 +18,8 @@ export default async function Home({ searchParams }: any) {
     gap-5"
       >
         {JSON.stringify(data)}
+        <h1>----</h1>
+        {process.env.HOSTNAME}
         {/* {data?.data?.map((dt: any, key: number) => (
           <ProductCard
             title={dt.name}
