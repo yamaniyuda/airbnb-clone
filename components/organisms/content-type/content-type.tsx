@@ -53,13 +53,12 @@ const ContentType: FC = () => {
 
 
   const selectedProductType = useMemo(() => {
-    console.log(searchParams.get("product-type"))
     return searchParams.get("product-type")
   }, [searchParams])
 
 
   const onClickHandler = (slug: string) => {
-    router.push(pathname + "?" + createQueryString("product-type", slug));
+    router.replace(pathname + "?" + createQueryString("product-type", slug), {scroll: false});
   };
 
 
