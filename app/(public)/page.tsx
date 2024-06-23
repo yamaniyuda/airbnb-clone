@@ -3,7 +3,7 @@ import styles from "./_page.module.scss";
 import Content from "./components/content/content";
 
 
-export default async function Home({ searchParams }: {[key: string]: string | string[] | undefined}) {
+export default async function Home({ searchParams }:any) {
 
   return (
     <div className={styles.page}>
