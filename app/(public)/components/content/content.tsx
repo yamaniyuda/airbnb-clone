@@ -28,7 +28,6 @@ export default async function Content(params: ContentProps) {
     hostName + "/api/product?" + querystring.stringify(params.searchParams),
   ).then(res => res.json());
 
-  console.log(data)
 
   return (
     <div className={styles.content}>
