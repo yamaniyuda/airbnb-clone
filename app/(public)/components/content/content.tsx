@@ -23,9 +23,9 @@ interface ContentProps {
 }
 
 export default async function Content(params: ContentProps) {
-  const hostName =  "https://" + headers().get('host');
+  const hostName =  "http://" + headers().get('host');
   const data = await fetch(
-    hostName + "/api/product?" + querystring.stringify(params.searchParams),
+    "/api/product?" + querystring.stringify(params.searchParams),
   ).then(res => {console.log(res); return res.json()});
 
 
