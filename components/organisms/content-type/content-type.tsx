@@ -81,7 +81,7 @@ const ContentType: FC = () => {
               key={key}
               onClick={() => onClickHandler(dt.slug)}
               className={`${styles.carauser_type__category} ${
-                dt.slug === selectedProductType ? styles.carause_type__active : ""
+                dt.slug === selectedProductType || (searchParams.get("product-type") === null && key === 0) ? styles.carause_type__active : ""
               }`}
             >
               <Image

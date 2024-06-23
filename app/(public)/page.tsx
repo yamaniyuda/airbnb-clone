@@ -7,9 +7,7 @@ export default async function Home({ searchParams }:any) {
 
   return (
     <div className={styles.page}>
-      <Suspense>
-        <Content searchParams={searchParams} />
-      </Suspense>
+     <Content searchParams={searchParams} />
     </div>
   );
 }
