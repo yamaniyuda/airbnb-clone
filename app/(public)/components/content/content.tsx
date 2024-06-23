@@ -1,30 +1,17 @@
 import styles from "./content.module.scss";
 import ProductCard from "@/components/melecules/product-card";
 import querystring from "querystring";
-import { headers } from "next/headers";
-
-
-const DUMMY_DATA: any = {
-  title: "Open the Olympic Gaems",
-  desc: "Hosted by Mathieu Lehanneur",
-  status: "Sold Out",
-  img: [
-    "/contents/icons/icon-1.png",
-    "/contents/icons/icon-1.png",
-    "/contents/icons/icon-1.png",
-    "/contents/icons/icon-1.png",
-  ],
-};
 
 interface ContentProps {
   searchParams: any;
 }
 
 export default async function Content(params: ContentProps) {
-  const hostName =  "http://" + headers().get('host');
-  const data = await fetch(process.env.HOSTNAME + "/api/product?" + querystring.stringify(params.searchParams),
-  ).then(res => {console.log(res); return res.json()});
-
+  const data = await fetch(
+    process.env.HOSTNAME +
+      "/api/product?" +
+      querystring.stringify(params.searchParams),
+  ).then((res) => res.json());
 
   return (
     <div className={styles.content}>
