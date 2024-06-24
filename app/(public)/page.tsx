@@ -1,15 +1,13 @@
-import { Suspense } from "react";
-import styles from "./_page.module.scss";
+import { Fragment, Suspense } from "react";
 import Content from "./components/content/content";
+import Header from "@/components/organisms/header/header";
 
 
 export default async function Home({ searchParams }: any) {
-
   return (
-    <div className={styles.page}>
-      <Suspense fallback={<div>loading...</div>}>
-        <Content searchParams={searchParams} />
-      </Suspense>
-    </div>
+    <Fragment>
+      <Header />
+      <Content searchParams={searchParams} />
+    </Fragment>
   );
 }

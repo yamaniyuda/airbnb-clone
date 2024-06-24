@@ -4,6 +4,7 @@ import ProfileDropdown from "@/components/melecules/profile-dropdown";
 import { motion, Variants } from "framer-motion";
 import styles from "./_header.module.scss";
 import Search from "../search/search";
+import { useHeaderContentProvider } from "./header";
 
 
 const headerContainerVariant: Variants = {
@@ -43,33 +44,25 @@ const headerContainerVariant: Variants = {
 
 
 
-interface HeaderContentProps {
-  showBlockElHandler: VoidFunction
-}
+interface HeaderContentProps {}
 
 
 
-const HeaderContent: FC<HeaderContentProps> = ({ showBlockElHandler }) => {
+const HeaderContent: FC<HeaderContentProps> = () => {
   const [animate, setAnimate] = useState<string>()
+  const { isScrolled, showBlockHandler, isDetail } = useHeaderContentProvider()
 
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-  
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) setAnimate("close");
-    else setAnimate("open");
-  };
+    if (isDetail) {setAnimate("close"); return}
+    if (isScrolled) setAnimate("close")
+    else setAnimate("open")
+  }, [isScrolled])
 
 
   const showHeaderFixedHandler = () => {
     setAnimate("hidden_open_click")
-    showBlockElHandler()
+    showBlockHandler()
   }
 
 
@@ -83,7 +76,7 @@ const HeaderContent: FC<HeaderContentProps> = ({ showBlockElHandler }) => {
       animate={animate}
     >
       <BrandIcon />
-      <Search showHeaderFixedHandler={showHeaderFixedHandler} />
+      <Search showHeaderFixedHandler={showHeaderFixedHandler} isDetail={isDetail} />
       <ProfileDropdown />
     </motion.div>
   );

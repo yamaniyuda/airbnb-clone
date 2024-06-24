@@ -1,6 +1,4 @@
-import { Handler, ResponeGetBody } from "../../_model";
 import { NextRequest, NextResponse } from "next/server";
-import { Product } from "../_mode";
 import DataProduct from "../_data_product.json"
 import DataProductType from '../_data_facility.json'
 
@@ -10,12 +8,11 @@ interface Params {
 }
 
 
-
 export const GET = async (_: NextRequest, context: { params: Params }) => {
   const params = context.params.product_id
   let data = DataProduct.filter(data => data.id === params)[0]
-  const primerFacilities = DataProductType.filter(dt => data.primer_facilities_id.includes(dt.id))
-  const cammonFacilities = DataProductType.filter(dt => data.cammon_facilities_id.includes(dt.id))
+  const primerFacilities = DataProductType.filter(dt => data?.primer_facilities_id.includes(dt.id))
+  const cammonFacilities = DataProductType.filter(dt => data?.cammon_facilities_id.includes(dt.id))
 
   Object.assign(data, { primer_facilities: primerFacilities })
   Object.assign(data, { cammon_facilities: cammonFacilities })

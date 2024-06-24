@@ -7,15 +7,8 @@ import styles from './_search.module.scss'
 import { InitialSearchLogic, SearchLogic, Payloads as PaylaodSearchLogic, SearchLogicKind } from "./state/search-logic";
 
 
-interface Guests {
-  adults: number
-  children: number
-  infants: number
-  pets: number
-} 
-
-
 interface SearchProviderComponentProps {
+  isDetail: boolean
   showHeaderFixedHandler: VoidFunction
 }
 
@@ -43,7 +36,8 @@ const SearchContext = createContext<SearchContextProps>({
   dispatchFilterSearch: () => {},
   searchLogic: null,
   dispatchSearchLogic: () => {},
-  showHeaderFixedHandler: () => {}
+  showHeaderFixedHandler: () => {},
+  isDetail: false
 })
 
 
@@ -51,20 +45,30 @@ const useSearchProviderComponent = () => useContext(SearchContext)
 
 
 const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProviderComponentProps>(
-  ({ showHeaderFixedHandler }, ref) => {
+  ({ showHeaderFixedHandler, isDetail }, ref) => {
     const [filterSearch, dispatchFilterSearch] = useReducer(SearchReducer, InitialSearchReducer)
     const [searchLogic, dispatchSearchLogic] = useReducer(SearchLogic, InitialSearchLogic)
 
     
     const handleScroll = () => {
-      if (window.scrollY > 50) dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false });
-      else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
+      if (!isDetail) {
+        if (window.scrollY > 50) dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false });
+        else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
+      } else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false })
+      
       dispatchSearchLogic({ type: SearchLogicKind.SHOWCURRENTTAB, payload: null })
       dispatchSearchLogic({ type: SearchLogicKind.SHOWINPUTSEARCH, payload: null })
     };
+
+
+    const hideSearch = () => {
+      if (!isDetail) return
+      dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false })
+    }
   
   
     useEffect(() => {
+      hideSearch()
       window.addEventListener('scroll', handleScroll);
       return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -73,7 +77,7 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProv
 
 
     return (
-      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic, dispatchSearchLogic, showHeaderFixedHandler }}>
+      <SearchContext.Provider value={{ filterSearch, dispatchFilterSearch, searchLogic, dispatchSearchLogic, showHeaderFixedHandler, isDetail }}>
         <motion.div className={styles.search}>
           <SearchTab />
           <SearchInput />

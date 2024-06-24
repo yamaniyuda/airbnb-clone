@@ -5,6 +5,15 @@
     2xl:grid-cols-6
     2xl:mx-10
     gap-5
-    place-items-center
+    justify-center
+  ;
+}
+
+.page {
+  @apply 
+    relative
+    bg-white  
+    top-[18rem]
+    p-10
   ;
 }

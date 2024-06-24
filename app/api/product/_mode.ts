@@ -14,6 +14,7 @@ export interface ProductDetail extends Product {
   long_desc: string
   facility_desc: string[]
   primer_facilities: Facility[]
+  cammon_facilities: Facility[]
 }
 
 

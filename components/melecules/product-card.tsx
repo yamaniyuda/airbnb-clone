@@ -1,12 +1,14 @@
-"use client"
+"use client";
 
 import { Carousel } from "@mantine/carousel";
 import { Card, Group, Text } from "@mantine/core";
 import Image from "next/image";
 import { FC } from "react";
-import styles from './product-card.module.scss'
+import styles from "./product-card.module.scss";
+import Link from "next/link";
 
 interface ProductCardProps {
+  id: string;
   title: string;
   desc: string;
   status: string;
@@ -16,14 +18,22 @@ interface ProductCardProps {
   ranting: number | undefined;
 }
 
-const ProductCard: FC<ProductCardProps> = ({ date, desc, status, img, price, ranting, title }) => {
-
+const ProductCard: FC<ProductCardProps> = ({
+  date,
+  desc,
+  status,
+  img,
+  price,
+  ranting,
+  title,
+  id
+}) => {
   const imageCarauserSlider = img.map((data, key) => {
     return (
       <Carousel.Slide key={key}>
         <div>
           <Image
-            src={'/contents/' + data}
+            src={"/contents/" + data}
             height={200}
             alt="Norway"
             width={200}
@@ -55,33 +65,36 @@ const ProductCard: FC<ProductCardProps> = ({ date, desc, status, img, price, ran
           <button className={styles.product_card__btn_live}>Live</button>
         </div>
       </Carousel.Slide>
-    )
-  })
-
+    );
+  });
 
   return (
-    <Card className={styles.product_card_container}>
-      <Card.Section className={styles.product_card__image__container}>
-        <Carousel
-          withIndicators
-          height="16rem"
-          classNames={{ 
-            control: styles.control,
-            root: styles.root,
-            indicator: styles.indicator
-        }}>
-          {imageCarauserSlider}
-        </Carousel>
-      </Card.Section>
+    <Link href={'/rooms/' + id}>
+      <Card className={styles.product_card_container}>
+        <Card.Section className={styles.product_card__image__container}>
+          <Carousel
+            withIndicators
+            height="16rem"
+            classNames={{
+              control: styles.control,
+              root: styles.root,
+              indicator: styles.indicator,
+            }}
+          >
+            {imageCarauserSlider}
+          </Carousel>
+        </Card.Section>
 
-      <Card.Section>
-        <Text  fw={500}>{title}</Text>
-        <Text size="sm" c="dimmed">{desc}</Text>
-        <Text  fw={500}>{status}</Text>
-      </Card.Section>
-    </Card>
+        <Card.Section>
+          <Text fw={500}>{title}</Text>
+          <Text size="sm" c="dimmed">
+            {desc}
+          </Text>
+          <Text fw={500}>{status}</Text>
+        </Card.Section>
+      </Card>
+    </Link>
   );
 };
-
 
 export default ProductCard;

@@ -1,0 +1,31 @@
+.content_heading_image {
+  @apply
+    grid
+    grid-cols-4
+    gap-5
+  ;
+}
+
+
+.content_heading_image__container {
+  @apply
+    w-[100%]
+    h-[35rem] 
+    rounded-xl
+    overflow-hidden
+  ;
+}
+
+
+.content_heading_image_single {
+  @apply col-span-2 row-span-2 ;
+}
+
+
+.content_heading_image__img {
+  @apply
+    w-[100%]
+    h-[100%]
+    object-cover
+  ;
+}

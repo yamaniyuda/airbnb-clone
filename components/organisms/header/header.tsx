@@ -1,31 +1,43 @@
 'use client'
 
-import { FC, Suspense, useEffect, useState } from "react";
+import { createContext, FC, Suspense, useContext, useEffect, useState } from "react";
 import HeaderTop from "./header-top";
 import HeaderContent from "./header-content";
 import { motion, Variants } from "framer-motion"
 import styles from './_header.module.scss'
 import ContentType from "../content-type/content-type";
+import { headerVariant } from "./_variant_data";
 
 
-const headerVariant: Variants = {
-  "close": {
-    boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-    transition: {
-      ease: "easeInOut",
-      duration: .3,
-      delay: .1
-    },
-  },
-};
+interface HeaderProps {
+  isDetail?: boolean
+}
 
 
-const Header: FC = () => {
+interface HeaderContextProps {
+  isScrolled: boolean
+  isDetail: boolean
+  showBlockHandler: VoidFunction
+}
+
+
+const HeaderContentProvider = createContext<HeaderContextProps>({
+  isDetail: false,
+  isScrolled: false,
+  showBlockHandler: () => {}
+})
+
+
+const useHeaderContentProvider = () => useContext(HeaderContentProvider)
+
+
+const Header: FC<HeaderProps> = ({ isDetail = false }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [showBlackEl, setShowBlockEl] = useState<boolean>(false)
 
 
   useEffect(() => {
+    if (isDetail) return
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -33,7 +45,7 @@ const Header: FC = () => {
   }, []);
   
 
-  const showBlockElHandler = () => {
+  const showBlockHandler = () => {
     setShowBlockEl(!showBlackEl)
   }
 
@@ -44,16 +56,20 @@ const Header: FC = () => {
     setShowBlockEl(false)
   };
 
+
   return (
-    <motion.div initial={false} variants={headerVariant} animate={isScrolled ? "close" : "open"} className={styles.header_container}>
-      <Suspense>
-        <HeaderTop />
-        <HeaderContent showBlockElHandler={showBlockElHandler} />
-        <ContentType />
-      </Suspense>
-      { showBlackEl && <div className={styles.header_content__fixed}></div> }
-    </motion.div>
+    <HeaderContentProvider.Provider value={{ isDetail, isScrolled, showBlockHandler }}>
+      <motion.div initial={false} variants={headerVariant} animate={isScrolled ? "close" : "open"} className={styles.header_container}>
+       <Suspense>
+          { !isDetail && <HeaderTop />}
+          <HeaderContent />
+          { !isDetail && <ContentType /> }
+        </Suspense>
+        { showBlackEl && <div className={styles.header_content__fixed}></div> }
+      </motion.div>
+    </HeaderContentProvider.Provider>
   );
 };
 
 export default Header;
+export { useHeaderContentProvider }
