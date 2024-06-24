@@ -1,19 +1,19 @@
 import styles from "./content.module.scss";
 import ProductCard from "@/components/melecules/product-card";
-// import querystring from "querystring";
+import querystring from "querystring";
 
 interface ContentProps {
   searchParams: any;
 }
 
 export default async function Content(params: ContentProps) {
-  const res = await fetch(process.env.HOSTNAME + "/api/product?")
-  const data = await res?.json()
+  const data = await fetch(process.env.HOSTNAME + "/api/product?" + querystring.stringify(params.searchParams))
+                      .then(res => res.json());
 
 
   return (
     <div className={styles.content}>
-      {data?.data?.map((dt: any, key: number) => (
+      {data.data.map((dt: any, key: number) => (
         <ProductCard
           title={dt.name}
           date={dt.date}
