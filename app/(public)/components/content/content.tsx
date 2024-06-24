@@ -7,14 +7,13 @@ interface ContentProps {
 }
 
 export default async function Content(params: ContentProps) {
-  const data = await fetch(
-    process.env.HOSTNAME +
-      "/api/product?" ,
-  ).then((res) => res.json());
+  const res = await fetch(process.env.HOSTNAME + "/api/product?")
+  const data = await res?.json()
+
 
   return (
     <div className={styles.content}>
-      {data.data.map((dt: any, key: number) => (
+      {data?.data?.map((dt: any, key: number) => (
         <ProductCard
           title={dt.name}
           date={dt.date}

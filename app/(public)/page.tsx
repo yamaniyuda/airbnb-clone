@@ -11,27 +11,7 @@ export default async function Home({ searchParams }: any) {
 
   return (
     <div className={styles.page}>
-      <div
-        className="grid
-    grid-cols-4
-    gap-5"
-      >
-        {JSON.stringify(data)}
-        <h1>----</h1>
-        {process.env.HOSTNAME}
-        {/* {data?.data?.map((dt: any, key: number) => (
-          <ProductCard
-            title={dt.name}
-            date={dt.date}
-            desc={dt.front_desc}
-            img={dt.images}
-            price={dt.price}
-            ranting={dt.ranting}
-            status="false"
-            key={key}
-          />
-        ))} */}
-      </div>
+      <Content searchParams={searchParams} />
     </div>
   );
 }
