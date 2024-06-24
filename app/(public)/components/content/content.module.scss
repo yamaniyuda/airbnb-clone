@@ -1,7 +1,10 @@
 .content {
   @apply
     grid
-    grid-cols-4
+    md:grid-cols-4
+    2xl:grid-cols-6
+    2xl:mx-10
     gap-5
+    place-items-center
   ;
 }

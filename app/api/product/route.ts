@@ -7,7 +7,8 @@ import DataProductType from '../product-category/_data.json'
 
 
 
-export const GET = async (request: NextRequest) => {
+export const GET = async (request: NextRequest, context: any) => {
+  console.log(context)
   const searchPage = new URLSearchParams(new URL(request.url! as any).search)
   let page = 1
   let per_page = DataProduct.length

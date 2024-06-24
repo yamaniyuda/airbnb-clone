@@ -60,10 +60,11 @@ const ProductCard: FC<ProductCardProps> = ({ date, desc, status, img, price, ran
 
 
   return (
-    <Card>
+    <Card className={styles.product_card_container}>
       <Card.Section className={styles.product_card__image__container}>
         <Carousel
           withIndicators
+          height="16rem"
           classNames={{ 
             control: styles.control,
             root: styles.root,

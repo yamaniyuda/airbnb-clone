@@ -1,7 +1,9 @@
 .carauser_type__container {
   @apply bg-white
     py-3
-    px-10;
+    px-10
+    2xl:px-20
+    ;
 }
 
 .control_is_inactive {
@@ -55,9 +57,9 @@
 .carauser_type__indicator {
   @apply grid
     items-center
-    h-[9vh]
+    h-[3rem]
     w-[10vh]
-    -mt-4;
+    -mt-3;
 }
 
 .carause_type__icon {
@@ -71,7 +73,7 @@
 }
 
 .carause_type__right {
-  @apply carauser_type__indicator justify-end;
+  @apply carauser_type__indicator justify-end mr-10;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     270deg,
@@ -83,7 +85,7 @@
 }
 
 .carause_type__left {
-  @apply carauser_type__indicator justify-start;
+  @apply carauser_type__indicator justify-start ml-10;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
