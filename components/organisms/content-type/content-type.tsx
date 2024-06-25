@@ -73,7 +73,6 @@ const ContentType: FC = () => {
       className={styles.carauser_type__container}
       slideSize="max-content"
       slidesToScroll={5}
-      controlsOffset="xl"
       align="start"
       nextControlIcon={<IndicatorRight />}
       previousControlIcon={<IndicatorLeft />}

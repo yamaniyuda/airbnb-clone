@@ -19,7 +19,8 @@ const ContentHeadingImage: FC<ContentHeadingImageProps> = ({ images }) => {
             <Image
               key={key}
               width={100}
-              quality="100"
+              quality={100}
+              unoptimized
               className={`
                 ${style.content_heading_image__img}
                 ${(images.length !== 1 && key === 0) && style.content_heading_image_single}  

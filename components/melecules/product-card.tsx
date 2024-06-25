@@ -37,6 +37,7 @@ const ProductCard: FC<ProductCardProps> = ({
             height={200}
             alt="Norway"
             width={200}
+            unoptimized
             className={styles.product_card__image}
           />
           <button className={styles.product_card__btn}>

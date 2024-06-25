@@ -2,7 +2,7 @@
   @apply
     grid
     grid-cols-4
-    gap-5
+    gap-2
   ;
 }
 
@@ -10,7 +10,7 @@
 .content_heading_image__container {
   @apply
     w-[100%]
-    h-[35rem] 
+    h-[30rem] 
     rounded-xl
     overflow-hidden
   ;
@@ -28,4 +28,22 @@
     h-[100%]
     object-cover
   ;
+}
+
+.content_adress {
+  @apply py-6 border-b-[1px];
+  p:nth-child(1) {
+    @apply
+      text-[22px]
+      text-[#22222]
+      font-bold
+    ;
+  }
+
+  p:nth-child(2) {
+    @apply
+      text-[16px]
+      text-[#22222]
+    ;
+  }
 }

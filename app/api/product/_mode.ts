@@ -12,6 +12,7 @@ export interface Product {
 export interface ProductDetail extends Product {
   user_id: string
   long_desc: string
+  address: string | null
   facility_desc: string[]
   primer_facilities: Facility[]
   cammon_facilities: Facility[]
@@ -23,4 +24,12 @@ export interface Facility {
   name: string
   desc: string | null
   icon: string
+}
+
+export interface User {
+  id: string
+  name: string
+  start_year: string
+  profile: string
+  desc: string
 }

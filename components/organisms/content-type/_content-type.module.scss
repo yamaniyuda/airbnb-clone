@@ -17,6 +17,13 @@
   border: none !important;
   opacity: 1 !important;
   box-shadow: none !important;
+  &:nth-child(1) {
+    @apply 2xl:pl-5 -ml-5;
+  }
+
+  &:nth-child(2) {
+    @apply 2xl:pr-5 -mr-5;
+  }
   &[data-inactive] {
     opacity: 0;
     width: 1px;
