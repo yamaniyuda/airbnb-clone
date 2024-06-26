@@ -6,6 +6,8 @@ import { Product } from "../api/product/_mode";
 
 
 
+
+
 export default async function Home({ searchParams }: any) {
   return (
     <Fragment>
