@@ -11,13 +11,14 @@ const ProductCard = dynamic(() => import("@/components/melecules/product-card"),
 
 
 export default async function Content(params: ContentProps) {
-  const data = await fetch("https://airbnb.yamaniyuda.com" + "/api/product?" + querystring.stringify(params.searchParams), {  })
-                      .then((res) => res.json());
+  const data = await fetch(process.env.HOSTNAME + "/api/product?" + querystring.stringify(params.searchParams), { cache: 'no-store' })
+                      .then((res) => res?.json())
+                      .catch(_ => { return {} })
 
   return (
     <div className={styles.page}>
       <div className={styles.content}>
-        {data.data.map((dt: any, key: number) => (
+        {data?.data?.map((dt: any, key: number) => (
           <ProductCard
             id={dt.id}
             title={dt.name}
