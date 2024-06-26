@@ -75,7 +75,7 @@ const ProductCard: FC<ProductCardProps> = ({
         <Card.Section className={styles.product_card__image__container}>
           <Carousel
             withIndicators
-            height="16rem"
+            height="19rem"
             classNames={{
               control: styles.control,
               root: styles.root,

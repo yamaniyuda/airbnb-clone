@@ -15,3 +15,22 @@
     mb-4
   ;
 }
+
+.page__grid {
+  @apply
+    flex
+    gap-20
+  ;
+}
+
+.page__content_left {
+  @apply
+    w-[60%]
+  ;
+}
+
+.page__content_right {
+  @apply
+    w-[40%]
+  ;
+}

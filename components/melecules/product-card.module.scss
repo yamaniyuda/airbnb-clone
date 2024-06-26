@@ -20,8 +20,8 @@
 }
 
 .product_card__image {
-  width: 16rem;
-  height: 16rem;
+  width: 19rem;
+  height: 19rem;
   object-fit: cover;
 }
 
@@ -70,8 +70,8 @@
 
 .product_card__image__container {
   box-sizing: border-box;
-  height: 16rem;
-  width: 16rem;
+  height: 19rem;
+  width: 19rem;
   overflow: hidden;
   @apply
     border
@@ -80,5 +80,5 @@
 }
 
 .product_card_container {
-  width: 16rem;
+  width: 19rem;
 }
