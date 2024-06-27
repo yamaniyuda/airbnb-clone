@@ -1,0 +1,142 @@
+.content_heading_image {
+  @apply
+    grid
+    grid-cols-4
+    gap-2
+  ;
+}
+
+
+.content_heading_image__container {
+  @apply
+    w-[100%]
+    h-[30rem] 
+    rounded-xl
+    overflow-hidden
+  ;
+}
+
+
+.content_heading_image_single {
+  @apply col-span-2 row-span-2 ;
+}
+
+
+.content_heading_image__img {
+  @apply
+    w-[100%]
+    h-[100%]
+    object-cover
+  ;
+}
+
+.content_adress {
+  @apply py-6 border-b-[1px];
+  p:nth-child(1) {
+    @apply
+      text-[22px]
+      text-[#22222]
+      font-bold
+    ;
+  }
+
+  p:nth-child(2) {
+    @apply
+      text-[16px]
+      text-[#22222]
+    ;
+  }
+}
+
+
+.content_profile {
+  @apply
+    flex
+    flex-row
+    py-7
+    gap-10
+    border-b-[1px]
+  ;
+
+  div {
+    @apply
+      flex
+      flex-col
+    ;
+
+    span:nth-child(1) {
+      @apply 
+        text-[16px]
+        text-[#222222] 
+        font-bold  
+      ;
+    }
+
+    span:nth-child(2) {
+      @apply 
+        text-[14px]
+        text-[#6A6A6A]   
+      ;
+    }
+  }
+}
+
+
+.content_primary_facility {
+  @apply
+    gap-10
+    border-b-[1px]
+  ;
+
+  div {
+    @apply
+      flex
+      gap-10
+      my-5
+    ;
+
+    p {
+      @apply
+        flex
+        flex-col
+      ;
+      span:nth-child(1) {
+        @apply
+          text-[16px]
+          text-[#2222222]
+          font-bold
+        ;
+      }
+
+      span:nth-child(2) {
+        @apply
+          text-[14px]
+          text-[#6A6A6A]
+        ;
+      }
+    }
+  }
+}
+
+
+.content_desc {
+  @apply
+    border-b-[1px]
+    py-6
+  ;
+}
+
+
+.content_order {
+  @apply
+    p-5
+    border-[1px]
+    rounded-lg
+    shadow-md
+    sticky
+    top-[7rem]
+    right-0
+    mt-5
+  ;
+}
+

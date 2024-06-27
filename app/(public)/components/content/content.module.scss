@@ -1,7 +1,19 @@
 .content {
   @apply
     grid
-    grid-cols-4
+    md:grid-cols-4
+    2xl:grid-cols-6
+    2xl:mx-10
     gap-5
+    justify-center
+  ;
+}
+
+.page {
+  @apply 
+    relative
+    bg-white  
+    top-[18rem]
+    p-10
   ;
 }

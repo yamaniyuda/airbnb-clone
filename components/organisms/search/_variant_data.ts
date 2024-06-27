@@ -81,3 +81,28 @@ export const searchButtonVariant: Variants = {
     },
   }
 }
+
+
+export const headerOptionVariant: Variants = {
+  "close": {
+    opacity: 0,
+    scale: 0.1,
+    height: 0,
+    margin: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: .3,
+      delay: .1
+    },
+  },
+  "open": {
+    opacity: 1,
+    scale: 1,
+    height: "auto",
+    marginBottom: "1rem",
+    transition: {
+      ease: "easeInOut",
+      duration: 0.3,
+    },
+  }
+};

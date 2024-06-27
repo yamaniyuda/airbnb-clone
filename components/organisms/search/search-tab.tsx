@@ -7,35 +7,8 @@ import { FC, useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import styles from "./_search.module.scss";
 import { useSearchProviderComponent } from "./search";
+import { headerOptionVariant } from "./_variant_data";
 
-/**
- * @constant headerOptionVariant
- * @description Variants for Framer Motion to handle the animation of the search options.
- * @property {Variants} close - Defines the animation properties when the search options are closed (scrolled).
- */
-const headerOptionVariant: Variants = {
-  "close": {
-    opacity: 0,
-    scale: 0.1,
-    height: 0,
-    margin: 0,
-    transition: {
-      ease: "easeInOut",
-      duration: .3,
-      delay: .1
-    },
-  },
-  "open": {
-    opacity: 1,
-    scale: 1,
-    height: "auto",
-    marginBottom: "1rem",
-    transition: {
-      ease: "easeInOut",
-      duration: 0.3,
-    },
-  }
-};
 
 /**
  * @component SearchTab

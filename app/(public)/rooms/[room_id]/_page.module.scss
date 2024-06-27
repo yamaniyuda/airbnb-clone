@@ -1,0 +1,36 @@
+.page {
+  @apply
+    relative
+    top-28
+    mx-28
+  ;
+}
+
+
+.page__title {
+  @apply
+    text-[26px]
+    text-[#22222]
+    font-bold
+    mb-4
+  ;
+}
+
+.page__grid {
+  @apply
+    flex
+    gap-20
+  ;
+}
+
+.page__content_left {
+  @apply
+    w-[60%]
+  ;
+}
+
+.page__content_right {
+  @apply
+    w-[40%]
+  ;
+}

@@ -11,6 +11,7 @@ import { ProductCategory } from "@/app/api/product-category/_model";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import "@mantine/carousel/styles.css";
 
+
 const IndicatorRight = () => (
   <div className={styles.carause_type__right}>
     <div className={styles.carause_type__icon}>
@@ -18,6 +19,7 @@ const IndicatorRight = () => (
     </div>
   </div>
 );
+
 
 const IndicatorLeft = () => (
   <div className={styles.carause_type__left}>
@@ -27,6 +29,7 @@ const IndicatorLeft = () => (
   </div>
 );
 
+
 const LoadingComponent: FC = () => (
   <div className="mx-3 flex flex-col justify-center items-center">
     <Skeleton height={30} circle className="mb-2" />
@@ -34,7 +37,9 @@ const LoadingComponent: FC = () => (
   </div>
 );
 
+
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 
 const ContentType: FC = () => {
   const { data, isLoading } = useSWR("/api/product-category", fetcher);
@@ -64,11 +69,10 @@ const ContentType: FC = () => {
 
   return (
     <Carousel
-      height={50}
+      height="3rem"
       className={styles.carauser_type__container}
       slideSize="max-content"
       slidesToScroll={5}
-      controlsOffset="xl"
       align="start"
       nextControlIcon={<IndicatorRight />}
       previousControlIcon={<IndicatorLeft />}
