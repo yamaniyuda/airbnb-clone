@@ -10,6 +10,7 @@ import ContentPrimaryFacility from "./components/content-primary-facility";
 import ContentDesc from "./components/content-desc";
 import ContentOrder from "./components/content-order";
 import { Metadata, ResolvingMetadata } from "next";
+import ContentHost from "./components/content-host";
 
 
 interface Props {
@@ -48,9 +49,10 @@ export default async function Rooms({ params } : Props) {
             <ContentProfile user={data.user} />
             <ContentPrimaryFacility primerFacilities={data.primer_facilities} />
             <ContentDesc categoryName={data.product_type.name} desc={data.long_desc} />
+            <ContentHost user={data.user} />
           </Box>
           <Box className={styles.page__content_right}>
-            <ContentOrder />
+            <ContentOrder price={data.price} />
           </Box>
         </Box>
       </Box>

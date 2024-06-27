@@ -2,10 +2,15 @@ import { FC } from "react";
 import styles from './_content.module.scss'
 
 
-const ContentOrderIcons: FC = () => {
+interface ContentOrderProps {
+  price: number | null
+}
+
+
+const ContentOrderIcons: FC<ContentOrderProps> = () => {
   return (
     <>
-      <span>Coming Agust</span>
+      <span>Coming Soon</span>
       <button>Notify me</button>
     </>
   )
@@ -13,10 +18,10 @@ const ContentOrderIcons: FC = () => {
 
 
 
-const ContentOrder: FC = () => {
+const ContentOrder: FC<ContentOrderProps> = (props) => {
   return (
     <div className={styles.content_order}>
-      <ContentOrderIcons />
+      { !props.price && <ContentOrderIcons {...props} /> }
     </div>
   )
 }
