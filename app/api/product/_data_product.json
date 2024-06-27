@@ -66,11 +66,11 @@
     ]
   },
   {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
-    "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
+    "id": "fd3ab55c-caf4-4d30-8e3c-d2c226639a54",
+    "product_type_id": "d75bb82f-45a2-4d6b-a24c-c244a1e2a132",
     "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
     "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
+    "price": 10000,
     "date": null,
     "ranting": null,
     "address": "New Castle, New York, United States",
@@ -83,9 +83,9 @@
       "2 baths"
     ],
     "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
+      "4605ad8f-3386-451c-bcb0-6a7ca6d97ea4",
+      "f25fa172-a78c-42d4-aefa-11692528bea4",
       "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
     ],
     "cammon_facilities_id": [
@@ -93,19 +93,19 @@
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
     ],
     "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
+      "21ca6f04.jpg",
+      "48f4559c.jpg",
+      "58c833a9.jpg",
+      "414dddd6.jpg",
+      "447dc389.jpg"
     ]
   },
   {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
+    "id": "cf700452-336b-49cb-9d27-e74f84afd661",
     "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
     "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
     "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
+    "price": 10000,
     "date": null,
     "ranting": null,
     "address": "New Castle, New York, United States",
@@ -118,9 +118,9 @@
       "2 baths"
     ],
     "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
+      "4605ad8f-3386-451c-bcb0-6a7ca6d97ea4",
+      "f25fa172-a78c-42d4-aefa-11692528bea4",
       "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
     ],
     "cammon_facilities_id": [
@@ -128,19 +128,19 @@
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
     ],
     "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
+      "c30229b4.jpg",
+      "2c37c482.jpg",
+      "42de5856.jpg",
+      "414dddd6.jpg",
+      "447dc389.jpg"
     ]
   },
   {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
+    "id": "3b74dc8f-7c1e-4f5a-8a5d-c09f951aa7bc",
     "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
     "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
     "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
+    "price": 10000,
     "date": null,
     "ranting": null,
     "address": "New Castle, New York, United States",
@@ -153,9 +153,9 @@
       "2 baths"
     ],
     "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
+      "4605ad8f-3386-451c-bcb0-6a7ca6d97ea4",
+      "f25fa172-a78c-42d4-aefa-11692528bea4",
       "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
     ],
     "cammon_facilities_id": [
@@ -163,19 +163,19 @@
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
     ],
     "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
+      "2c37c482.jpg",
+      "c30229b4.jpg",
+      "42de5856.jpg",
+      "414dddd6.jpg",
+      "447dc389.jpg"
     ]
   },
   {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
+    "id": "6db06623-ef92-4efe-bed2-e623fccb0150",
     "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
     "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
     "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
+    "price": 10000,
     "date": null,
     "ranting": null,
     "address": "New Castle, New York, United States",
@@ -188,9 +188,9 @@
       "2 baths"
     ],
     "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
+      "4605ad8f-3386-451c-bcb0-6a7ca6d97ea4",
+      "f25fa172-a78c-42d4-aefa-11692528bea4",
       "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
     ],
     "cammon_facilities_id": [
@@ -198,19 +198,15 @@
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
     ],
     "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
+      "42de5856.jpg"
     ]
   },
   {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
-    "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
+    "id": "59bb57ff-bf67-4aad-925b-5b9635f89d88",
+    "product_type_id": "d75bb82f-45a2-4d6b-a24c-c244a1e2a132",
     "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
     "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
+    "price": 10000,
     "date": null,
     "ranting": null,
     "address": "New Castle, New York, United States",
@@ -223,9 +219,9 @@
       "2 baths"
     ],
     "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
+      "4605ad8f-3386-451c-bcb0-6a7ca6d97ea4",
+      "f25fa172-a78c-42d4-aefa-11692528bea4",
       "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
     ],
     "cammon_facilities_id": [
@@ -233,116 +229,7 @@
       "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
     ],
     "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
-    ]
-  },
-  {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
-    "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
-    "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
-    "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
-    "date": null,
-    "ranting": null,
-    "address": "New Castle, New York, United States",
-    "front_desc": "Hosted by Joy",
-    "long_desc": "For the first time ever, celebrate the life and music of our friend and The Revolution’s legendary frontman, Prince, by staying at the actual Purple Rain house from the film. Enjoy an intimate tour, groove to some rare Prince songs, and get some sleep in The Kid’s bedroom. Wear your finest purple fits, and when you step into history, feel free to unleash your royal rockstar. Stay tuned.",
-    "facility_desc": [
-      "4 guests",
-      "2 bedrooms",
-      "2 beds",
-      "2 baths"
-    ],
-    "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-      "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
-      "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
-    ],
-    "cammon_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-      "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
-    ],
-    "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
-    ]
-  },
-  {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
-    "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
-    "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
-    "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
-    "date": null,
-    "ranting": null,
-    "address": "New Castle, New York, United States",
-    "front_desc": "Hosted by Joy",
-    "long_desc": "For the first time ever, celebrate the life and music of our friend and The Revolution’s legendary frontman, Prince, by staying at the actual Purple Rain house from the film. Enjoy an intimate tour, groove to some rare Prince songs, and get some sleep in The Kid’s bedroom. Wear your finest purple fits, and when you step into history, feel free to unleash your royal rockstar. Stay tuned.",
-    "facility_desc": [
-      "4 guests",
-      "2 bedrooms",
-      "2 beds",
-      "2 baths"
-    ],
-    "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-      "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
-      "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
-    ],
-    "cammon_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-      "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
-    ],
-    "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
-    ]
-  },
-  {
-    "id": "2ee9ac61-e9d4-4122-ac09-217f07299789",
-    "product_type_id": "9c1f82f4-23d1-4d4b-b6a5-249dc2c1738a",
-    "user_id": "4f2982f3-92c8-4703-8e6a-9f2b0419f7f2",
-    "name": "Stay in Prince’s Purple Rain house",
-    "price": 0,
-    "date": null,
-    "ranting": null,
-    "address": "New Castle, New York, United States",
-    "front_desc": "Hosted by Joy",
-    "long_desc": "For the first time ever, celebrate the life and music of our friend and The Revolution’s legendary frontman, Prince, by staying at the actual Purple Rain house from the film. Enjoy an intimate tour, groove to some rare Prince songs, and get some sleep in The Kid’s bedroom. Wear your finest purple fits, and when you step into history, feel free to unleash your royal rockstar. Stay tuned.",
-    "facility_desc": [
-      "4 guests",
-      "2 bedrooms",
-      "2 beds",
-      "2 baths"
-    ],
-    "primer_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-      "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb",
-      "816d7486-f2af-4ef5-a36b-b1c6ab1f2a80",
-      "1555390c-c2af-416e-a4e9-6671e1fe2d8b"
-    ],
-    "cammon_facilities_id": [
-      "62f7857a-6be9-4d64-b84c-bc06e5d2f2b3",
-      "0f86d4be-c0ca-46fc-bb24-ce974e07d0fb"
-    ],
-    "images": [
-      "06b8284d.jpg",
-      "3a49350b.jpg",
-      "55ed0774.jpg",
-      "97774fd0.jpg",
-      "f2e933cc.jpg"
+      "950ad7be.jpg"
     ]
   }
 ]

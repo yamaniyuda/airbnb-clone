@@ -77,6 +77,9 @@ const ContentHost: FC<ContentHostProps> = ({ user }) => {
           <div className="">Lives in Paris, France</div>
         </div>
       </div>
+      <div>
+        <p>{user.desc}</p>
+      </div>
     </div>
   );
 };

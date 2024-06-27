@@ -168,6 +168,10 @@
     py-5
     border-b-[1px]
   ;
+
+  p {
+    @apply my-5;
+  }
 }
 
 .skill_wrapping {
@@ -212,5 +216,37 @@
 .content_host__title {
   @apply
     text-[22px]
+  ;
+}
+
+
+.content_maps {
+  @apply
+    flex
+    flex-col
+    gap-5
+    py-5
+  ;
+
+  h2 {
+    @apply 
+      text-[22px]
+      font-semibold  
+    ;
+  }
+
+  iframe {
+    @apply
+      rounded-lg
+    ;
+  }
+}
+
+.content_order__checkinout {
+  @apply
+    flex
+    flex-col
+    justify-start
+    items-start
   ;
 }

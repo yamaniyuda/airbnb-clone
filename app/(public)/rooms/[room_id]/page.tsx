@@ -11,6 +11,7 @@ import ContentDesc from "./components/content-desc";
 import ContentOrder from "./components/content-order";
 import { Metadata, ResolvingMetadata } from "next";
 import ContentHost from "./components/content-host";
+import ContentMaps from "./components/content-maps";
 
 
 interface Props {
@@ -52,8 +53,11 @@ export default async function Rooms({ params } : Props) {
             <ContentHost user={data.user} />
           </Box>
           <Box className={styles.page__content_right}>
-            <ContentOrder price={data.price} />
+            <ContentOrder categoryType={data.product_type.name} price={data.price} />
           </Box>
+        </Box>
+        <Box>
+          <ContentMaps address={data.address} />
         </Box>
       </Box>
     </Fragment>
