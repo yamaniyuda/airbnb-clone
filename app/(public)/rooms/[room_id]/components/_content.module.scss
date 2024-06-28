@@ -141,6 +141,7 @@
     flex
     flex-col
     gap-5
+    box-border
   ;
 
   button {
@@ -246,7 +247,56 @@
   @apply
     flex
     flex-col
+    gap-5
     justify-start
     items-start
+  ;
+}
+
+.content_order__checkinout__chheckin {
+  @apply
+    py-1
+    px-2
+    border-[1px]
+  ;
+
+  label {
+    font-size: 0.625rem !important;
+    font-weight: 700;
+  }
+
+  input {
+    @apply
+      focus:outline-none
+      w-[100%]
+    ;
+  }
+}
+
+.content_order__checkinout__container {
+  @apply
+    rounded-lg
+    border-[1px]
+    border-black
+    overflow-hidden
+  ;
+  
+  tr, td {
+    @apply
+      border-[1px]
+      border-black
+    ;
+  }
+
+
+}
+
+.content_order__wraper {
+  @apply
+    rounded-lg
+    overflow-hidden
+    border-[1px]
+    box-border
+    border-black
   ;
 }

@@ -22,17 +22,29 @@ const ContentOrderChekInOut: FC<ContentOrderProps> = (props) => {
   return (
     <div className={styles.content_order__checkinout}>
       <h1>{props.price}</h1>
-      <div>
-        <div className="checkin">
-          <input type="text" />
-        </div>
-        <div className="checkin">
-          <input type="text" />
-        </div>
-        <div>
-          <input type="text" />
-        </div>
+      <div className={styles.content_order__wraper}>
+        <table className={styles.content_order__checkinout__container}>
+          <tbody>
+            <tr>
+              <td className={styles.content_order__checkinout__chheckin}>
+                <label htmlFor="">CHECK-IN</label>
+                <input type="text" placeholder="Add date" />
+              </td>
+              <td className={styles.content_order__checkinout__chheckin}>
+                <label htmlFor="">CHECK-OUT</label>
+                <input type="text" placeholder="Add date" />
+              </td>
+            </tr>
+            <tr>
+              <td colSpan={2} className={styles.content_order__checkinout__chheckin}>
+                <label htmlFor="">GUESTS</label>
+                <input type="text" placeholder="Guest" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <button>Reserve</button>
     </div>
   )
 }
