@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
 import Content from "./components/content/content";
 import Header from "@/components/organisms/header/header";
 import ContentButton from "./components/content/content-button";
@@ -12,13 +12,15 @@ export default async function Home({ searchParams }: any) {
 
   return (
     <Fragment>
-      <Header/>
-      {
-        showContent === 'list'
-          ? <Content searchParams={searchParams} />
-          : <ContentMaps />
-      }
-      { currentTabe !== 'icons' && <ContentButton searchParams={searchParams} /> }
+      <Suspense fallback={<h1>loadin</h1>}>
+        <Header/>
+        {
+          showContent === 'list'
+            ? <Content searchParams={searchParams} />
+            : <ContentMaps />
+        }
+        { currentTabe !== 'icons' && <ContentButton searchParams={searchParams} /> }
+      </Suspense>
     </Fragment>
   );
 }
