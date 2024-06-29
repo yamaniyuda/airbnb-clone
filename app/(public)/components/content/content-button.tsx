@@ -8,14 +8,16 @@ interface ContentButton {
 
 
 const ContentButton: FC<ContentButton> = ({ searchParams }) => {
-  const urlSearch = new URLSearchParams(searchParams).get('show') ?? 'list'
-  
+  const urlSearch = new URLSearchParams(searchParams)
+  const show = urlSearch.get('show') ?? 'list'
+  urlSearch.set('show', (show === 'list' ? 'map' : 'list'))
+
 
   return (
     <div className={styles.content_button}>
-      <Link prefetch={false} replace={false} href={'?show=' + (urlSearch === 'list' ? 'map' : 'list')}>
+      <Link prefetch={false} replace={false} href={'?' + urlSearch.toString()}>
         <button>
-          Show {urlSearch === 'list' ? 'Map' : 'List'}
+          Show {show === 'list' ? 'Map' : 'List'}
         </button>
       </Link>
     </div>

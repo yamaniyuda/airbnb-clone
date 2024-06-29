@@ -1,5 +1,5 @@
 import BrandIcon from "@/components/atoms/brand-icon";
-import { FC, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import ProfileDropdown from "@/components/melecules/profile-dropdown";
 import { motion, Variants } from "framer-motion";
 import styles from "./_header.module.scss";

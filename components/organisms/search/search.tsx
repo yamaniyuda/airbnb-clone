@@ -5,6 +5,7 @@ import { InitialSearchReducer, Payloads as PayloadSearchAction, SearchActionKind
 import SearchInput from "./search-input";
 import styles from './_search.module.scss'
 import { InitialSearchLogic, SearchLogic, Payloads as PaylaodSearchLogic, SearchLogicKind } from "./state/search-logic";
+import { useSearchParams } from "next/navigation";
 
 
 interface SearchProviderComponentProps {
@@ -45,9 +46,10 @@ const useSearchProviderComponent = () => useContext(SearchContext)
 
 
 const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProviderComponentProps>(
-  ({ showHeaderFixedHandler, isDetail }, ref) => {
+  ({ showHeaderFixedHandler, isDetail = true }, ref) => {
     const [filterSearch, dispatchFilterSearch] = useReducer(SearchReducer, InitialSearchReducer)
     const [searchLogic, dispatchSearchLogic] = useReducer(SearchLogic, InitialSearchLogic)
+    const searchParams = useSearchParams()
 
     
     const handleScroll = () => {
@@ -62,7 +64,8 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProv
 
 
     const hideSearch = () => {
-      if (!isDetail) return
+      if (searchParams.get('show') === 'list') dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
+      if (!isDetail && (searchParams.get('show') === 'list')) return
       dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false })
     }
   
@@ -74,6 +77,11 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProv
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
+
+
+    useEffect(() => {
+      hideSearch()
+    }, [searchParams])
 
 
     return (

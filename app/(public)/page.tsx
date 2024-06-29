@@ -6,17 +6,19 @@ import ContentMaps from "./components/content/content-map";
 
 
 export default async function Home({ searchParams }: any) {
-  const urlSearch = new URLSearchParams(searchParams).get('show') ?? 'list'
+  const urlSearch = new URLSearchParams(searchParams)
+  const showContent = urlSearch.get('show') || 'list'
+  const currentTabe = urlSearch.get('product-type') || 'icons'
 
   return (
     <Fragment>
-      <Header />
+      <Header/>
       {
-        urlSearch === 'list'
+        showContent === 'list'
           ? <Content searchParams={searchParams} />
           : <ContentMaps />
       }
-      <ContentButton searchParams={searchParams} />
+      { currentTabe !== 'icons' && <ContentButton searchParams={searchParams} /> }
     </Fragment>
   );
 }
