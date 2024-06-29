@@ -1,12 +1,13 @@
 'use client'
 
-import { createContext, FC, Suspense, useContext, useEffect, useState } from "react";
+import { createContext, FC, Suspense, useCallback, useContext, useEffect, useState } from "react";
 import HeaderTop from "./header-top";
 import HeaderContent from "./header-content";
 import { motion, Variants } from "framer-motion"
 import styles from './_header.module.scss'
 import ContentType from "../content-type/content-type";
 import { headerVariant } from "./_variant_data";
+import { useSearchParams } from "next/navigation";
 
 
 interface HeaderProps {
@@ -17,12 +18,14 @@ interface HeaderProps {
 interface HeaderContextProps {
   isScrolled: boolean
   isDetail: boolean
+  isMapContent: boolean
   showBlockHandler: VoidFunction
 }
 
 
 const HeaderContentProvider = createContext<HeaderContextProps>({
   isDetail: false,
+  isMapContent: false,
   isScrolled: false,
   showBlockHandler: () => {}
 })
@@ -34,6 +37,7 @@ const useHeaderContentProvider = () => useContext(HeaderContentProvider)
 const Header: FC<HeaderProps> = ({ isDetail = false }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [showBlackEl, setShowBlockEl] = useState<boolean>(false)
+  const searchParams = useSearchParams()
 
 
   useEffect(() => {
@@ -57,11 +61,19 @@ const Header: FC<HeaderProps> = ({ isDetail = false }) => {
   };
 
 
+  const checkShowHideHeaderTop = useCallback(() => {
+    const show = searchParams.get('show') || 'list'
+    return !(show === 'map' || isDetail)
+  }, [searchParams, isDetail])
+
+
+
+
   return (
-    <HeaderContentProvider.Provider value={{ isDetail, isScrolled, showBlockHandler }}>
+    <HeaderContentProvider.Provider value={{ isDetail, isScrolled, showBlockHandler, isMapContent: searchParams.get('show') === 'map' }}>
       <motion.div initial={false} variants={headerVariant} animate={isScrolled ? "close" : "open"} className={styles.header_container}>
        <Suspense>
-          { !isDetail && <HeaderTop />}
+          { checkShowHideHeaderTop() && <HeaderTop />}
           <HeaderContent />
           { !isDetail && <ContentType /> }
         </Suspense>

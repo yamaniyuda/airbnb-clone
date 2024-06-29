@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import styles from "./content.module.scss";
+import styles from "./_content.module.scss";
 import querystring from "querystring";
 
 interface ContentProps {
@@ -11,13 +11,14 @@ const ProductCard = dynamic(() => import("@/components/melecules/product-card"),
 
 
 export default async function Content(params: ContentProps) {
-  const data = await fetch(process.env.HOSTNAME + "/api/product?" + querystring.stringify(params.searchParams), { cache: 'no-store' })
+
+  const data = await fetch(process.env.HOSTNAME + "/api/product?" + (params.searchParams ? querystring.stringify(params.searchParams) : 'product-type=icons'), { cache: 'no-store' })
                       .then((res) => res?.json())
-                      .catch(_ => { return {} })
+
 
   return (
     <div className={styles.page}>
-      <div className={styles.content}>
+      <div className={styles.content}>  
         {data?.data?.map((dt: any, key: number) => (
           <ProductCard
             id={dt.id}
