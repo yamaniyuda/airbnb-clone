@@ -50,7 +50,7 @@ const SearchInputDate: FC = () => {
           </Menu.Target>
 
           <Menu.Dropdown className={styles.search_input_destination__container}>
-            <DatePicker type="range" />
+            <DatePicker numberOfColumns={2} type="range" />
           </Menu.Dropdown>
         </Menu>
       </motion.div>

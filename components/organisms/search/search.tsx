@@ -64,8 +64,9 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProv
 
 
     const hideSearch = () => {
-      if (searchParams.get('show') === 'list') dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
-      if (!isDetail && (searchParams.get('show') === 'list')) return
+      const show = searchParams.get('show') || 'list'
+      if (show === 'list') dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
+      if (!isDetail && (show === 'list')) return
       dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false })
     }
   

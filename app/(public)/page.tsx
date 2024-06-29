@@ -12,7 +12,7 @@ export default async function Home({ searchParams }: any) {
 
   return (
     <Fragment>
-      <Suspense fallback={<h1>loadin</h1>}>
+      <Suspense>
         <Header/>
         {
           showContent === 'list'
