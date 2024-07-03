@@ -1,7 +1,7 @@
 'use client'
 
-import { FC, useEffect, useState } from "react";
-import { motion, Variants } from 'framer-motion'
+import { FC } from "react";
+import { motion } from 'framer-motion'
 import styles from './_header.module.scss'
 import { useHeaderContentProvider } from "./header";
 import { headerTopVariant } from "./_variant_data";
@@ -9,9 +9,10 @@ import { headerTopVariant } from "./_variant_data";
 
 const HeaderTop: FC = () => {
   const { isScrolled } = useHeaderContentProvider()
+
  
   return (
-    <motion.div initial={false} variants={headerTopVariant} animate={isScrolled ? "close" : "open"} className={styles.header_top}>
+    <motion.div initial={false} variants={headerTopVariant} animate={isScrolled  ? "close" : "open"} className={styles.header_top}>
       <motion.span className={styles.header_top__span}>
         Learn more about Icons
       </motion.span>
