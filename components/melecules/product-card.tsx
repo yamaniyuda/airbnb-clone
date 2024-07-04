@@ -91,7 +91,7 @@ const ProductCard: FC<ProductCardProps> = ({
           <Text size="sm" c="dimmed">
             {desc}
           </Text>
-          <Text fw={500}>{status}</Text>
+          <Text fw={500}>Rp {price}</Text>
         </Card.Section>
       </Card>
     </Link>

@@ -1,8 +1,8 @@
-import { Fragment, Suspense } from "react";
-import Content from "./components/content/content";
 import Header from "@/components/organisms/header/header";
-import ContentButton from "./components/content/content-button";
+import { Fragment, Suspense } from "react";
 import ContentMaps from "./components/content/content-map";
+import ContentButton from "./components/content/content-button";
+import Content from "./components/content/content";
 
 
 export default async function Home({ searchParams }: any) {
@@ -19,8 +19,9 @@ export default async function Home({ searchParams }: any) {
             ? <Content searchParams={searchParams} />
             : <ContentMaps />
         }
-        { currentTabe !== 'icons' && <ContentButton searchParams={searchParams} /> }
+        { currentTabe !== 'icons' && <ContentButton  searchParams={searchParams} /> }
       </Suspense>
     </Fragment>
   );
 }
+  
