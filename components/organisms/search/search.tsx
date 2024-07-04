@@ -10,7 +10,7 @@ import { useSearchParams } from "next/navigation";
 
 interface SearchProviderComponentProps {
   isDetail: boolean
-  showHeaderFixedHandler: VoidFunction
+  showHeaderFixedHandler: any
 }
 
 
@@ -56,8 +56,10 @@ const Search: SearchProviderComponent = forwardRef<SearchProviderRef, SearchProv
       if (!isDetail) {
         if (window.scrollY > 50) dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false });
         else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: true });
-      } else dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false })
-      
+      } else {
+        showHeaderFixedHandler(false)
+        dispatchSearchLogic({ type: SearchLogicKind.SHOWSEARCH, payload: false })
+      }
       dispatchSearchLogic({ type: SearchLogicKind.SHOWCURRENTTAB, payload: null })
       dispatchSearchLogic({ type: SearchLogicKind.SHOWINPUTSEARCH, payload: null })
     };

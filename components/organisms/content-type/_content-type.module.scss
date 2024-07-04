@@ -2,8 +2,12 @@
   @apply bg-white
     py-3
     px-10
-    2xl:px-20
-    ;
+    2xl:px-20;
+}
+
+.content_type {
+  @apply relative
+      flex;
 }
 
 .control_is_inactive {
@@ -29,6 +33,7 @@
     width: 1px;
     height: 1px;
     cursor: default;
+    opacity: 0 !important;
   }
 
   &[data-inactive],
@@ -110,4 +115,37 @@
   span {
     @apply text-black border-b-2 border-black;
   }
+}
+
+
+.content_type_filter {
+  @apply
+    bg-white
+    w-[100%]
+    flex
+    justify-evenly
+    pr-5
+    items-center
+  ;
+}
+
+.content_type_filter__button__filters {
+  @apply
+    border-[#ebebeb]
+    border-[1px]
+    py-3
+    flex
+    gap-3
+    font-bold
+    px-4
+    text-[12px]
+    rounded-lg
+    hover:border-black
+  ;
+}
+
+.content_type_filter__button__taxes {
+  @apply
+    content_type_filter__button__filters
+  ;
 }
