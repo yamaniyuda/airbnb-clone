@@ -57,12 +57,13 @@ const HeaderContent: FC<HeaderContentProps> = () => {
     if (isDetail) {setAnimate("close"); return}
     if (isScrolled) setAnimate("close")
     else setAnimate("open")
+    
   }, [isScrolled])
 
 
-  const showHeaderFixedHandler = () => {
+  const showHeaderFixedHandler = (showBlockHeader = true) => {
     setAnimate("hidden_open_click")
-    showBlockHandler()
+    showBlockHandler(showBlockHeader)
   }
 
 

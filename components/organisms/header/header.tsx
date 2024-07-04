@@ -19,7 +19,7 @@ interface HeaderContextProps {
   isScrolled: boolean
   isDetail: boolean
   isMapContent: boolean
-  showBlockHandler: VoidFunction
+  showBlockHandler: any
 }
 
 
@@ -49,15 +49,16 @@ const Header: FC<HeaderProps> = ({ isDetail = false }) => {
   }, []);
   
 
-  const showBlockHandler = () => {
-    setShowBlockEl(!showBlackEl)
+  const showBlockHandler = (value = true) => {
+    setShowBlockEl(value)
   }
 
 
   const handleScroll = () => {
+    setShowBlockEl(false)
     if (window.scrollY > 50) setIsScrolled(true);
     else setIsScrolled(false);
-    setShowBlockEl(false)
+
   };
 
 
