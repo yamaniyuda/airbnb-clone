@@ -18,4 +18,5 @@ const ContentType: FC = () => {
   );
 };
 
+
 export default ContentType;
